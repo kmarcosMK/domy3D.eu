@@ -11,15 +11,28 @@
     });
   }
 
-  // cookie banner minimal (no analytics unless consent)
-  var banner = qs('#cookie-banner');
-  var accept = qs('#cookie-accept');
-  if(banner && accept){
-    if(localStorage.getItem('cookiesAccepted')==='1'){ banner.style.display='none'; }
-    accept.addEventListener('click', function(){
-      localStorage.setItem('cookiesAccepted','1'); banner.style.display='none';
-    });
-  }
+  // Cookie banner
+  (function(){
+    const key = 'domy3d_cookie_consent';
+    const banner = document.getElementById('cookie-banner');
+    if(!banner) return;
+    const accept = document.getElementById('cookie-accept');
+    const closeBtn = document.getElementById('cookie-close');
+    const xBtn = document.getElementById('cookie-x');
+
+    const hasConsent = localStorage.getItem(key);
+    if(!hasConsent){ banner.hidden = false; }
+
+    function dismiss(consented){
+      if(consented) localStorage.setItem(key, 'accepted');
+      banner.hidden = true;
+    }
+
+    accept?.addEventListener('click', ()=>dismiss(true));
+    closeBtn?.addEventListener('click', ()=>dismiss(false));
+    xBtn?.addEventListener('click', ()=>dismiss(false));
+    document.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && !banner.hidden) dismiss(false); });
+  })();
 
   // simple reading-time calc for cards (optional)
   document.querySelectorAll('[data-reading-time]').forEach(function(el){
