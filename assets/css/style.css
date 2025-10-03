@@ -23,6 +23,7 @@ a:focus,button:focus,.btn:focus{outline:3px solid var(--color-accent);outline-of
 /* Layout */
 .container{max-width:var(--maxw);margin:0 auto;padding:0 var(--space-5)}
 header.site-header{position:sticky;top:0;background:#fff;z-index:50;border-bottom:1px solid #e7e8ea}
+
 .header-inner{display:flex;align-items:center;gap:var(--space-5);padding:var(--space-4) 0}
 .logo{font-weight:800;font-size:20px;letter-spacing:0.2px;color:var(--color-primary)}
 nav.primary{margin-left:auto}
@@ -148,4 +149,37 @@ footer h4{margin:0 0 var(--space-4);color:#fff}
 
 .nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 16px; }
 .nav a { text-decoration: none; }
+
+.header-inner{
+  display:flex;
+  align-items:center;
+  gap:24px;
+  padding:16px 0;
+  justify-content:space-between;   /* NOWE */
+}
+
+.nav ul{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  gap:16px;
+}
+.nav a{ text-decoration:none; }
+
+/* Mobile domyślnie chowamy menu */
+.nav{ display:none; }
+.nav.is-open{ display:block; }
+
+/* Desktop ≥ 900px: pokazujemy menu jako flex, ukrywamy hamburger */
+@media (min-width: 900px){
+  .nav{ display:block; }
+  .nav ul{ display:flex; gap:16px; }
+  .nav-toggle{ display:none; }
+}
+
+/* Hero 2 kolumny na dużych ekranach */
+@media (min-width: 1024px){
+  .hero{ grid-template-columns: 1.1fr 0.9fr; align-items:center; }
+}
 
