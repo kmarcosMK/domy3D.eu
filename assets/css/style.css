@@ -117,3 +117,16 @@ footer h4{margin:0 0 var(--space-4);color:#fff}
 .btn{ display:inline-block; padding:10px 16px; border-radius:999px; border:1px solid var(--color-primary); color:var(--color-primary); background:#fff; font-weight:600 }
 .btn.btn-primary{ background:var(--color-primary); color:#fff; border-color:var(--color-primary) }
 .btn.btn-ghost{ background:#fff; border-color:#ddd; color:#333 }
+
+.nav{ display:flex; }
+@media (max-width:768px){
+  .nav{ display:none; }
+  .nav.is-open{ display:block; position:absolute; top:56px; right:0; left:0; background:#fff; border-top:1px solid #eee; padding:12px 16px; }
+  .nav ul{ display:grid; gap:8px; }
+  .nav-toggle{ display:inline-flex; }
+}
+@media (min-width:769px){
+  .nav-toggle{ display:none; }
+}
+
+
