@@ -173,9 +173,18 @@ header.site-header{position:sticky;top:0;background:#fff;z-index:50;border-botto
   </div>
 </footer>
 
-<div id="cookie-banner" style="position:fixed;left:16px;right:16px;bottom:16px;background:#fff;border:1px solid #e7e8ea;border-radius:12px;padding:16px;display:block">
-  <p>Używamy wyłącznie niezbędnych plików cookie. Analityka włączana jest tylko za Twoją zgodą.</p>
-  <button id="cookie-accept" class="cta">OK</button>
+<div id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Informacja o plikach cookie" hidden>
+  <div class="cookie-content">
+    <p>Używamy plików cookie w celach funkcjonalnych. Analityka jest domyślnie wyłączona. Możesz wyrazić zgodę lub zamknąć komunikat.</p>
+    <div class="cookie-actions">
+      <button id="cookie-accept" class="btn btn-primary">Zgadzam się</button>
+      <button id="cookie-close" class="btn btn-ghost" aria-label="Zamknij komunikat">Zamknij</button>
+    </div>
+  </div>
+  <button id="cookie-x" class="cookie-x" aria-label="Zamknij baner">
+    <span aria-hidden="true">×</span>
+  </button>
 </div>
+  
 </body>
 </html>
