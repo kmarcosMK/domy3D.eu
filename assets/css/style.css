@@ -135,4 +135,14 @@ footer h4{margin:0 0 var(--space-4);color:#fff}
 .breadcrumbs a{ color:#555; text-decoration:none; }
 .breadcrumbs a:hover{ text-decoration:underline; }
 
+.lb-overlay{
+  position:fixed; inset:0; background:rgba(0,0,0,.8); display:none; align-items:center; justify-content:center; z-index:9998;
+}
+
+
+.lb-overlay.is-open{ display:flex; }
+.lb-overlay img{ max-width:90vw; max-height:90vh; border-radius:12px; box-shadow:0 12px 40px rgba(0,0,0,.4); }
+.lb-close{
+  position:absolute; top:16px; right:16px; font-size:28px; line-height:1; background:#fff; border:1px solid #ddd; border-radius:10px; padding:4px 10px; cursor:pointer;
+}
 
