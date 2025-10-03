@@ -146,3 +146,6 @@ footer h4{margin:0 0 var(--space-4);color:#fff}
   position:absolute; top:16px; right:16px; font-size:28px; line-height:1; background:#fff; border:1px solid #ddd; border-radius:10px; padding:4px 10px; cursor:pointer;
 }
 
+.nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 16px; }
+.nav a { text-decoration: none; }
+
