@@ -34,9 +34,24 @@
     <h1>{{TITLE}}</h1>
     <div class="article-meta"><span>{{DATE}}</span><span>Autor: {{AUTHOR}}</span><span>Czas czytania: {{READING_TIME}}</span></div>
   </div>
+
+  <nav class="breadcrumbs" aria-label="Okruszki">
+  <ol>
+    <li><a href="/">Domy3D</a></li>
+    <li><a href="/druk-3d/">Druk 3D</a></li>
+    <li aria-current="page">Tytuł artykułu</li>
+  </ol>
+</nav>
+
+
+  
   <article class="article-body">
     {{CONTENT}}
   </article>
+
+
+
+
 </main>
 <footer class="site-footer"><div class="container"><small>&copy; {{YEAR}} Domy3D</small></div></footer>
 </body>
