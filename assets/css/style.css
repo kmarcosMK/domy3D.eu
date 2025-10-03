@@ -129,4 +129,10 @@ footer h4{margin:0 0 var(--space-4);color:#fff}
   .nav-toggle{ display:none; }
 }
 
+.breadcrumbs{ font-size:.9rem; margin:12px 0 20px }
+.breadcrumbs ol{ display:flex; gap:8px; flex-wrap:wrap; color:#555 }
+.breadcrumbs li+li::before{ content:"/"; margin-right:8px; color:#bbb }
+.breadcrumbs a{ color:#555; text-decoration:none; }
+.breadcrumbs a:hover{ text-decoration:underline; }
+
 
