@@ -2,9 +2,9 @@
 <html lang="pl">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kontakt i wycena — Domy3D</title>
+<title>Kontakt — Domy3D</title>
 <meta name="description" content="Skontaktuj się z Domy3D. Minimalny formularz: Imię, e-mail, wiadomość, zgoda RODO.">
-<link rel="canonical" href="https://www.domy3d.pl/contact/">
+<link rel="canonical" href="https://www.domy3d.eu/contact/">
 <link rel="preload" href="/assets/css/style.min.css" as="style" onload="this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="/assets/css/style.css"></noscript>
 <script defer src="/assets/js/main.min.js"></script>
@@ -14,7 +14,7 @@
 <main class="container">
   <section class="section">
     <h1>Formularz kontaktowy</h1>
-    <p>Wypełnij pola i wyślij — odpowiemy zwykle w 24–48 h.</p>
+    <p>Wypełnij pola i wyślij </p>
     <form name="contact" method="POST" data-netlify="true" action="/contact/sent.html" netlify-honeypot="bot-field">
       <p class="hidden"><label>Nie wypełniaj: <input name="bot-field"></label></p>
       <p><label>Imię*<br><input type="text" name="name" required aria-required="true"></label></p>
@@ -23,9 +23,7 @@
       <p><label>Wiadomość*<br><textarea name="message" rows="6" required aria-required="true"></textarea></label></p>
       <p><label><input type="checkbox" name="rodo" required aria-required="true"> Wyrażam zgodę na przetwarzanie moich danych w celu obsługi zapytania.</label></p>
       <p><button class="cta" type="submit">Wyślij</button></p>
-    </form>
-    <p><small>Alternatywa: skonfiguruj <code>Formspree</code> albo użyj <code>contact/form-handler.php</code> na hostingu z PHP.</small></p>
-  </section>
+     </section>
 </main>
 <footer class="site-footer"><div class="container"><small>&copy; {datetime.date.today().year} Domy3D</small></div></footer>
 </body>
