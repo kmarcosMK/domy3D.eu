@@ -85,3 +85,37 @@
     el.textContent = mins + ' min czytania';
   });
 })();
+
+
+// Minimal lightbox
+(function(){
+  const links = document.querySelectorAll('a[data-lightbox]');
+  if(!links.length) return;
+
+  const overlay = document.createElement('div');
+  overlay.className = 'lb-overlay';
+  overlay.innerHTML = '<button class="lb-close" aria-label="Zamknij">×</button><img alt="">';
+  document.body.appendChild(overlay);
+  const img = overlay.querySelector('img');
+  const btn = overlay.querySelector('.lb-close');
+
+  function open(src, alt){
+    img.src = src; img.alt = alt || '';
+    overlay.classList.add('is-open');
+    btn.focus();
+  }
+  function close(){ overlay.classList.remove('is-open'); img.src = ''; }
+
+  links.forEach(a=>{
+    a.addEventListener('click', (e)=>{
+      const href = a.getAttribute('href');
+      const alt = a.querySelector('img')?.alt || a.getAttribute('aria-label');
+      if(href && (href.endsWith('.jpg') || href.endsWith('.jpeg') || href.endsWith('.webp') || href.endsWith('.png'))){
+        e.preventDefault(); open(href, alt);
+      }
+    });
+  });
+  btn.addEventListener('click', close);
+  overlay.addEventListener('click', (e)=>{ if(e.target===overlay) close(); });
+  document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') close(); });
+})();
