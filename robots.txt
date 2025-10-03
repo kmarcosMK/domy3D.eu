@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.domy3d.pl/sitemap.xml
