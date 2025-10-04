@@ -338,6 +338,52 @@ footer h4 {
     --fs-h2: 32px;
     --fs-h3: 22px;
   }
+
+
+  /* --- HERO REFINED --- */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  padding: var(--space-7) 0;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: clamp(28px, 3.5vw + 1rem, 38px);
+  line-height: 1.25;
+  font-weight: 700;
+  max-width: 800px;
+  margin: 0 0 var(--space-4);
+  color: var(--color-primary);
+}
+
+.hero .lead {
+  font-size: 17px;
+  color: #3a3a3a;
+  max-width: 640px;
+  margin-bottom: var(--space-5);
+}
+
+.hero-cta {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.hero .card {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--color-gray);
+}
+
+/* 2 kolumny na desktopie */
+@media (min-width: 1024px) {
+  .hero {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+}
+
 }
 @media (max-width: 480px) {
   :root { --fs-h1: 40px; }
