@@ -338,7 +338,7 @@ footer h4 {
     --fs-h2: 32px;
     --fs-h3: 22px;
   }
-
+}
 
   /* --- HERO REFINED --- */
 .hero {
@@ -387,4 +387,4 @@ footer h4 {
 }
 @media (max-width: 480px) {
   :root { --fs-h1: 40px; }
-}
+
