@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $to = "aifuture@wp.pl";
     $subject = "Nowa wiadomość z formularza Domy3D";
     $body = "Imię: $name\nEmail: $email\nTelefon: $phone\n\nWiadomość:\n$message";
-    $headers = "From: noreply@domy3d.pl\r\nReply-To: $email\r\n";
+    $headers = "From: noreply@domy3d.eu\r\nReply-To: $email\r\n";
     if(mail($to,$subject,$body,$headers)){
         header("Location: /contact/sent.html");
         exit;
