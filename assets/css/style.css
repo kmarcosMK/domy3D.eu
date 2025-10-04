@@ -182,4 +182,37 @@ footer h4{margin:0 0 var(--space-4);color:#fff}
 @media (min-width: 1024px){
   .hero{ grid-template-columns: 1.1fr 0.9fr; align-items:center; }
 }
+/* === MOBILE MENU FIX === */
+.nav-toggle {
+  background: none;
+  border: 0;
+  padding: 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+}
 
+.nav-toggle svg {
+  width: 28px;
+  height: 28px;
+  fill: var(--color-primary);
+}
+
+/* Ukryj menu domyślnie na mobile */
+@media (max-width: 900px) {
+  .nav {
+    display: none;
+  }
+  .nav.is-open {
+    display: block;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    left: 0;
+    background: #fff;
+    border-top: 1px solid #eee;
+    padding: 16px;
+  }
+}
