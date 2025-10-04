@@ -49,11 +49,15 @@ header.site-header{position:sticky;top:0;background:#fff;z-index:50;border-botto
     <a class="logo" href="/" aria-label="Domy3D — strona główna"> <img src="/assets/img/logo.png" alt="Domy3D" width="132" height="28" decoding="async">
     </a>
 
-    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Otwórz menu">
+ <button class="nav-toggle" 
+   aria-expanded="false" 
+   aria-controls="mobile-menu" 
+   aria-label="Otwórz menu" 
+   data-mobile-toggle>
       <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3"/></svg>
     </button>
 
-    <nav id="primary-nav" class="nav" role="navigation" aria-label="Główne menu">
+ <nav id="mobile-menu" class="nav mobile-menu" role="navigation" aria-label="Główne menu">
       <ul>
         <li><a href="/druk-3d/">Druk 3D</a></li>
         <li><a href="/projektowanie/">Projektowanie</a></li>
