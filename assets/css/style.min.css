@@ -388,3 +388,5 @@ footer h4 {
   :root { --fs-h1: 40px; }
 
 }
+
+.nav-toggle{background:none;border:0;padding:6px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;line-height:0}.nav-toggle svg{width:28px;height:28px;fill:var(--color-primary)}@media(max-width:900px){.nav{display:none}.nav.is-open{display:block;position:absolute;top:60px;right:0;left:0;background:#fff;border-top:1px solid #eee;padding:16px}}
