@@ -133,7 +133,7 @@ header.site-header {
 /*kreska w hero */
 .hero-divider {
   border: 0;
-  height: 2px;
+  height: 1px;
   background: var(--color-accent);
   width: 80%;        /* 80% szerokości kontenera hero-text */
   margin: 24px auto; /* 24px odstępu od tekstu + wyśrodkowanie */
