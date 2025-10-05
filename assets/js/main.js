@@ -188,3 +188,13 @@ if (hash.startsWith('#tag=')) {
 } else {
   filterByTag(null); // pokaż wszystkie
 }
+
+window.addEventListener('hashchange', () => {
+  const hash = window.location.hash;
+  if (hash.startsWith('#tag=')) {
+    const activeTag = decodeURIComponent(hash.replace('#tag=', ''));
+    filterByTag(activeTag);
+  } else {
+    filterByTag(null); // pokaż wszystkie artykuły
+  }
+});
