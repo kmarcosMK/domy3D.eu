@@ -156,3 +156,36 @@
   overlay.addEventListener('click', (e)=>{ if(e.target===overlay) close(); });
   document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') close(); });
 })();
+
+// -------- Filtr tagów
+(function(){
+  const tags = document.querySelectorAll('.tag');
+  const articles = document.querySelectorAll('.card');
+
+  if(!tags.length || !articles.length) return;
+
+  tags.forEach(tag=>{
+    tag.addEventListener('click', ()=>{
+      const tagText = tag.textContent.trim();
+      
+      // filtruj artykuły
+      articles.forEach(article=>{
+        const articleTags = Array.from(article.querySelectorAll('.tag')).map(t=>t.textContent.trim());
+        article.style.display = articleTags.includes(tagText) ? '' : 'none';
+      });
+
+      // opcjonalnie: zmień URL bez przeładowania
+      const url = new URL(window.location);
+      url.searchParams.set('tag', tagText);
+      window.history.replaceState({}, '', url);
+    });
+  });
+
+  // jeśli URL ma ?tag=... -> automatycznie filtruj przy starcie
+  const params = new URLSearchParams(window.location.search);
+  const activeTag = params.get('tag');
+  if(activeTag){
+    const el = Array.from(tags).find(t => t.textContent.trim()===activeTag);
+    if(el) el.click();
+  }
+})();
