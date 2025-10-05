@@ -158,26 +158,33 @@
 })();
 
 // -------- Filtr tagów
-// kliknięcie tagu
-tags.forEach(tag=>{
-  tag.addEventListener('click', ()=>{
-    const tagText = tag.textContent.trim();
-    
-    // filtruj artykuły
-    articles.forEach(article=>{
-      const articleTags = Array.from(article.querySelectorAll('.tag')).map(t=>t.textContent.trim());
-      article.style.display = articleTags.includes(tagText) ? '' : 'none';
-    });
+const tags = document.querySelectorAll('.tag');
+const articles = document.querySelectorAll('article.card');
 
-    // ustaw hash zamiast query string
+function filterByTag(tagText) {
+  articles.forEach(article => {
+    const articleTags = Array.from(article.querySelectorAll('.tag')).map(t => t.textContent.trim());
+    article.style.display = (tagText === null || articleTags.includes(tagText)) ? '' : 'none';
+  });
+
+  // aktywne podświetlenie tagów
+  tags.forEach(t => t.classList.toggle('active', t.textContent.trim() === tagText));
+}
+
+// kliknięcie tagu
+tags.forEach(tag => {
+  tag.addEventListener('click', () => {
+    const tagText = tag.textContent.trim();
+    filterByTag(tagText);
     window.location.hash = 'tag=' + encodeURIComponent(tagText);
   });
 });
 
 // filtr przy starcie
 const hash = window.location.hash;
-if(hash.startsWith('#tag=')){
+if (hash.startsWith('#tag=')) {
   const activeTag = decodeURIComponent(hash.replace('#tag=', ''));
-  const el = Array.from(tags).find(t => t.textContent.trim()===activeTag);
-  if(el) el.click();
+  filterByTag(activeTag);
+} else {
+  filterByTag(null); // pokaż wszystkie
 }
