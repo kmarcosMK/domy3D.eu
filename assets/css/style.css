@@ -80,7 +80,8 @@ header.site-header {
 }
 
 .hero-text {
-  flex: 1;
+  flex: 1;           /* zajmuje 1 część dostępnego miejsca */
+  min-width: 300px;  /* minimalna szerokość, żeby tekst się nie ścieśniał */
 }
 
 .hero-text h1 {
