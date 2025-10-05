@@ -1,672 +1,73 @@
-
 <!DOCTYPE html>
 <html lang="pl">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Domy3D — wizualizacje 3D, druk 3D w budownictwie i projektowaniu</title>
-  <meta name="description" content="Domy3D to polski serwis content-first o wizualizacjach 3D, druku 3D w budownictwie i projektowaniu domów. Artykuły, poradniki, galerie koncepcyjne.">
-  <link rel="canonical" href="https://domy3d.eu/">
-  <meta property="og:title" content="Domy3D — wizualizacje 3D, druk 3D w budownictwie i projektowaniu">
-  <meta property="og:description" content="Artykuły, poradniki i galerie koncepcyjne o wizualizacjach 3D i druku 3D w budownictwie.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://domy3d.eu/">
-  <meta property="og:image" content="https://domy3d.eu/assets/img/fot2.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="/assets/icons/search.svg">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preload" as="image" href="/assets/img/fot2.png" imagesrcset="/assets/img/placeholder-1.svg 1600w, /assets/img/placeholder-2.svg 1200w" imagesizes="(max-width: 768px) 100vw, 1200px">
- 
-  <style>
-/* Critical CSS: header + hero minimal */
-:root{--color-primary:#0B3D91;--color-accent:#0A8CFF;--color-text:#222;--space-5:24px;--radius-lg:18px}
-body{margin:0;font:400 16px/1.6 "Inter",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
-header.site-header{position:sticky;top:0;background:#fff;z-index:50;border-bottom:1px solid #e7e8ea}
-.header-inner{display:flex;align-items:center;gap:24px;padding:16px 0}
-.logo{font-weight:800;font-size:20px;color:var(--color-primary)}
-.hero{display:grid;gap:48px;padding:48px 0}
-.hero h1{font-size:44px;line-height:1.15;margin:0}
-.lead{font-size:18px;color:#333;margin:0}
-.cta{padding:10px 16px;background:var(--color-accent);color:#fff;border-radius:999px;border:0;font-weight:600}
-.container{max-width:1200px;margin:0 auto;padding:0 24px}
-</style>
-
-  
-  <link rel="preload" href="/assets/css/style.css" as="style" onload="this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="/assets/css/style.css"></noscript>
-  <script defer src="/assets/js/main.js"></script>
-  <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "WebSite", "name": "Domy3D", "url": "https://domy3d.eu/", "potentialAction": {"@type": "SearchAction", "target": "https://domy3d.eu/?q={search_term_string}", "query-input": "required name=search_term_string"}, "publisher": {"@type": "Organization", "name": "Domy3D", "logo": {"@type": "ImageObject", "url": "https://domy3d.eu/assets/img/placeholder-2.svg"}}}
-  </script>
-
-  
+  <title>Druk 3D w budownictwie</title>
+  <link rel="stylesheet" href="/assets/css/style.min.css">
 </head>
-
-  
 <body>
-<header class="site-header" role="banner">
-  <div class="container header-inner">
-    <a href="/" class="logo" aria-label="Domy3D — strona główna">
-      <img src="/assets/img/logo.png" alt="Domy3D — logo serwisu" width="132" height="28" decoding="async" />
-    </a>
-
-    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Otwórz lub zamknij menu">
-      <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
-        <path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3"/>
-      </svg>
-    </button>
-
-    <nav id="primary-nav" class="nav" aria-label="Główne menu">
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="logo">
+      <a href="/"><img src="/assets/img/logo.png" alt="Logo strony"></a>
+    </div>
+    <nav class="site-nav">
       <ul>
-        <li><a href="/druk-3d/">Druk 3D</a></li>
-        <li><a href="/projektowanie/">Projektowanie</a></li>
-        <li><a href="/wizualizacje/">Wizualizacje</a></li>
-        <li><a href="/articles/">Artykuły</a></li>
-        <li><a href="/contact/">Kontakt</a></li>
-        <li><a href="https://forum.domy3d.eu" class="btn secondary">Forum</a></li>
+        <li><a href="/">Strona główna</a></li>
+        <li><a href="/artykuly.html">Artykuły</a></li>
+        <li><a href="/kontakt.html">Kontakt</a></li>
       </ul>
     </nav>
+  </header>
 
-    <a href="/search/" class="icon-search" aria-label="Wyszukaj w serwisie">
-      <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24">
-        <path d="M10 4a6 6 0 104.472 10.027l4.75 4.75 1.415-1.414-4.75-4.75A6 6 0 0010 4zm0 2a4 4 0 110 8 4 4 0 010-8z"/>
-      </svg>
-    </a>
-  </div>
-</header>
-
-
-<main id="main-content" class="container" role="main">
-  <section class="hero" aria-label="Hero">
-     <div class="hero-text">
-      <h1>Wizualizacje 3D i druk 3D w budownictwie — praktycznie</h1>
-      <p class="lead">Domy3D to: analizy, poradniki i galerie koncepcyjne.</p>
-        <hr class="hero-divider"> 
-      <div class="hero-cta">
-        <a class="btn primary" href="/articles/przyklad-druk-3d.html">Czytaj artykuły</a>
-        <a class="btn secondary" href="/druk-3d/">Dowiedz się o druku 3D domów</a>
+  <!-- MAIN CONTENT -->
+  <main id="main-content" class="container" role="main">
+    <!-- HERO -->
+    <section class="section hero" aria-label="Hero artykułu">
+      <div class="hero-text">
+        <h1>Druk 3D w budownictwie</h1>
+        <p class="lead">Poznaj technologie, koszty, projektowanie i realia wykonawcze drukowanych domów.</p>
       </div>
+      <div class="hero-image">
+        <img src="/assets/img/fot2.png" width="600" height="338" alt="Miniatura artykułu: druk 3D w budownictwie">
+      </div>
+    </section>
+
+    <!-- ARTICLE BODY -->
+    <article class="article-body section" aria-labelledby="art-title">
+      <h2 id="art-title">Czym jest druk 3D w budownictwie?</h2>
+      <p>Druk 3D w budownictwie polega na wytwarzaniu elementów budynków warstwa po warstwie, zwykle przy użyciu betonu lub specjalnych mieszanek. Technologia pozwala na szybsze i bardziej precyzyjne wykonywanie konstrukcji oraz redukcję odpadów materiałowych.</p>
+
+      <h3>Technologie drukarek</h3>
+      <p>Obecnie używane są różne typy drukarek: od robotów nakładających beton po automatyczne systemy budowlane z ramieniem drukującym. Wybór technologii zależy od wielkości budynku, materiałów oraz kosztów inwestycji.</p>
+
+      <h3>Koszty i ekonomia</h3>
+      <p>Koszt budowy domu drukowanego 3D może być niższy od tradycyjnego, szczególnie jeśli projekt jest powtarzalny. Największe oszczędności wynikają z redukcji czasu pracy oraz mniejszego zużycia materiałów.</p>
+
+      <h3>Projektowanie i ograniczenia</h3>
+      <p>Druk 3D pozwala na bardziej swobodne kształtowanie brył i detali architektonicznych, ale wymaga specjalistycznego projektowania i uwzględnienia ograniczeń technologicznych, takich jak wymiary drukarki i właściwości materiału.</p>
+
+      <h3>Realne przykłady</h3>
+      <p>Na świecie powstaje coraz więcej domów drukowanych w 3D, od niewielkich mieszkań po całe osiedla. Technologie te są testowane również w budowie mostów, magazynów czy elementów infrastruktury miejskiej.</p>
+
+      <p>Choć druk 3D w budownictwie jest jeszcze w fazie rozwoju, jego potencjał w redukcji kosztów, przyspieszeniu procesu budowy i zwiększeniu precyzji wykonania jest ogromny.</p>
+    </article>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <p>&copy; 2025 Domy3D.eu. Wszelkie prawa zastrzeżone.</p>
+      <nav>
+        <ul>
+          <li><a href="/polityka-prywatnosci.html">Polityka prywatności</a></li>
+          <li><a href="/kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
     </div>
-    <div class="hero-image">
-      <picture>
-        <source srcset="/assets/img/fot2.png" type="image/svg+xml">
-        <img src="/assets/img/fot2.png" width="1600" height="900" alt="Render 3D nowoczesnego domu" />
-      </picture>
-    </div>
-  </section>
+  </footer>
 
-  <section class="section" aria-labelledby="sec-articles">
-    <h2 id="sec-articles">Najnowsze artykuły</h2>
-    <div class="grid cols-3">
-      
-      <article class="card">
-        <picture><source srcset="/assets/img/fot2.png" type="image/svg+xml">
-          <img src="/assets/img/fot2.png" alt="Druk 3D ścian" loading="lazy"></picture>
-        <div class="content">
-          <h3><a href="/articles/przyklad-druk-3d.html">Druk 3D domów: technologie, koszty, realne terminy</a></h3>
-          <div class="meta"><span>2025-10-03</span><span>Autor: Redakcja</span><span data-reading-time="1600"></span></div>
-          <p>Przewodnik po technologiach druku 3D w budownictwie — od materiałów, przez koszty, po wymagania formalne.</p>
-          <div class="tags"><span class="tag">Druk 3D</span><span class="tag">Budownictwo</span></div>
-        </div>
-      </article>
-      
-      <article class="card">
-        <picture><source srcset="/assets/img/placeholder-3.svg" type="image/svg+xml">
-          <img src="/assets/img/placeholder-3.svg" alt="Wizualizacje wnętrz" loading="lazy"></picture>
-        <div class="content">
-          <h3><a href="/projektowanie/">Jak przygotować brief do wizualizacji</a></h3>
-          <div class="meta"><span>2025-10-03</span><span>Autor: Redakcja</span><span data-reading-time="900"></span></div>
-          <p>Checklista dla inwestora i projektanta: formaty plików, poziomy szczegółowości, iteracje i akceptacje.</p>
-          <div class="tags"><span class="tag">Wizualizacje</span><span class="tag">Projektowanie</span></div>
-        </div>
-      </article>
-      
-      <article class="card">
-        <picture><source srcset="/assets/img/placeholder-4.svg" type="image/svg+xml">
-          <img src="/assets/img/placeholder-4.svg" alt="Galeria koncepcyjna" loading="lazy"></picture>
-        <div class="content">
-          <h3><a href="#galeria">Galeria koncepcyjna: nowe formy</a></h3>
-          <div class="meta"><span>2025-10-03</span><span>Autor: Redakcja</span><span data-reading-time="600"></span></div>
-          <p>Zbiór inspiracji renderów 3D — bryła, światło, materiały. Wszystko w lekkim, responsywnym układzie.</p>
-          <div class="tags"><span class="tag">Galeria</span><span class="tag">Trendy</span></div>
-        </div>
-      </article>
-      
-    </div>
-  </section>
-
-  <section class="section" aria-labelledby="sec-topics">
-    <h2 id="sec-topics">Tematy przewodnie</h2>
-    <div class="grid cols-3">
-      <div class="card content"><h3>Druk 3D</h3><p>Technologie, materiały, prawo i realne terminy realizacji.</p></div>
-      <div class="card content"><h3>Projektowanie</h3><p>Workflow, briefy, wymiana plików i etapy iteracji.</p></div>
-      <div class="card content"><h3>Budownictwo przyszłości</h3><p>Automatyzacja, prefabrykacja, AI w projektowaniu.</p></div>
-    </div>
-  </section>
-
-  <section id="galeria" class="section" aria-labelledby="sec-gallery">
-    <h2 id="sec-gallery">Galeria koncepcyjna</h2>
-    <div class="gallery">
-      <figure><img src="/assets/img/placeholder-5.svg" alt="Wizualizacja domu A" loading="lazy"><figcaption>Dom A — bryła prosta</figcaption></figure>
-      <figure><img src="/assets/img/placeholder-6.svg" alt="Wizualizacja domu B" loading="lazy"><figcaption>Dom B — akcent materiałowy</figcaption></figure>
-      <figure><img src="/assets/img/placeholder-7.svg" alt="Wizualizacja wnętrza" loading="lazy"><figcaption>Wnętrze — strefa dzienna</figcaption></figure>
-      <figure><img src="/assets/img/placeholder-8.svg" alt="Detal elewacji" loading="lazy"><figcaption>Detal — faktura betonu</figcaption></figure>
-    </div>
-  </section>
-</main>
-
-<footer class="site-footer" role="contentinfo">
-  <div class="container footer-grid">
-    <div>
-      <h4>Kategorie</h4>
-      <ul>
-        <li><a href="/wizualizacje/">Wizualizacje</a></li>
-        <li><a href="/druk-3d/">Druk 3D</a></li>
-        <li><a href="/projektowanie/">Projektowanie</a></li>
-      </ul>
-    </div>
-
-    <div>
-      <h4>Kontakt</h4>
-      <ul>
-        <li><a href="/contact/">Formularz</a></li>
-        <li><a href="mailto:aifuture@wp.pl">aifuture@wp.pl</a></li>
-      </ul>
-    </div>
-
-    <div>
-      <h4>Prawo</h4>
-      <ul>
-        <li><a href="/privacy.md">Polityka prywatności</a></li>
-        <li><a href="/cookies.md">Cookies</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="container" style="padding-top:24px">
-    <small>&copy; 2025 Domy3D. Wszelkie prawa zastrzeżone.</small>
-  </div>
-</footer>
-
-<div id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Informacja o plikach cookie" hidden>
-  <div class="cookie-content">
-    <p>Używamy plików cookie w celach funkcjonalnych. Analityka jest domyślnie wyłączona. Możesz wyrazić zgodę lub zamknąć komunikat.</p>
-    
-    <div class="cookie-actions">
-      <button id="cookie-accept" class="btn btn-primary">Zgadzam się</button>
-      <button id="cookie-close" class="btn btn-ghost" aria-label="Zamknij komunikat">Zamknij</button>
-    </div>
-    
-  </div>
-  <button id="cookie-x" class="cookie-x" aria-label="Zamknij baner">
-    <span aria-hidden="true">×</span>
-  </button>
-</div>
-  
-</body>
-</html> plik artykulu <article class="article-body">
-
-  <p><strong>Druk 3D w budownictwie</strong> od kilku lat przestaje być futurystyczną ciekawostką, a staje się realnym narzędziem pracy. Pierwsze pokazowe domy powstały już dekadę temu, lecz to dopiero rozwój systemów sterowania, kontroli jakości mieszanki oraz standaryzacja procesu umożliwiły stabilne wdrożenia. W Polsce wciąż mówimy o projektach pilotażowych i niewielkiej skali, ale rynek globalny dojrzał — firmy wykonawcze traktują druk 3D jako alternatywę lub uzupełnienie prefabrykacji.</p>
-
-  <h2>Jak działa druk 3D w budownictwie?</h2>
-  <p>Najczęściej drukuje się tynkowo-betonową mieszankę na bazie cementu lub geopolimerów, modyfikowaną dodatkami poprawiającymi reologię i czas wiązania. Materiał musi wypływać plastycznie, zachowywać kształt kolejnych warstw i szybko uzyskiwać nośność. W praktyce stosuje się receptury otwarte (dobierane przez wykonawcę) lub systemy zamknięte dostarczane przez producenta drukarki.</p>
-  <p>W obu przypadkach kluczowa jest kontrola wilgotności, temperatury i składu oraz kalibracja prędkości wytłaczania względem ruchu głowicy.</p>
-
-  <h2>Geometria ścian i projektowanie</h2>
-  <p>Najpopularniejszy układ to ściany warstwowe typu <em>shell-infill</em> — dwie równoległe ścianki z wypełnieniem komórkowym. Zapewnia on dobrą nośność przy umiarkowanej masie, a puste przestrzenie można wypełnić izolacją.</p>
-  <p>Taka konstrukcja daje projektantom dużą swobodę, lecz wymaga precyzyjnego planowania tras instalacyjnych, nadproży i stref montażu stolarki.</p>
-
-  <h2>Czas realizacji</h2>
-  <p>Segment parterowy 70–100 m² można wydrukować w 24–48 godzin roboczych rozbitych na kilka dni (zależnie od pogody). Druk obejmuje głównie ściany nośne i działowe — fundamenty, strop, dach i instalacje wykonywane są tradycyjnie.</p>
-  <p>Mimo to harmonogram skraca się o tygodnie dzięki redukcji etapów mokrych i mniejszemu uzależnieniu od dostępności murarzy.</p>
-
-  <h2>Koszty i logistyka</h2>
-  <p>Koszty druku ścian bywają zbliżone lub nieco niższe niż tradycyjnego murowania, jeśli liczyć robociznę i czas. Trzeba jednak doliczyć:</p>
-  <ul>
-    <li>transport dużej drukarki,</li>
-    <li>przygotowanie mieszanki (na miejscu lub z węzła),</li>
-    <li>serwis i amortyzację sprzętu,</li>
-    <li>ryzyko przestojów pogodowych.</li>
-  </ul>
-  <p>Coraz częściej pojawia się model <em>„drukowania jako usługi”</em>, gdzie wykonawca rozlicza się za metr bieżący ściany lub godzinę pracy urządzenia.</p>
-
-  <h2>Kwestie formalne</h2>
-  <p>Polskie prawo budowlane nie posiada osobnych norm dla druku 3D. Projektant musi wykazać spełnienie wymagań dotyczących nośności, stateczności, izolacyjności i bezpieczeństwa pożarowego poprzez:</p>
-  <ul>
-    <li>badania materiałowe,</li>
-    <li>obliczenia numeryczne,</li>
-    <li>odniesienie do norm konstrukcji murowych i betonowych.</li>
-  </ul>
-
-  <h2>Rola BIM i współpraca branżowa</h2>
-  <p>Model BIM staje się nie opcją, lecz koniecznością. Projekt powinien uwzględniać krzywizny, dylatacje, sposób kotwienia elementów nie drukowanych (np. ram okiennych) oraz ścieżki dla instalacji. Każda zmiana geometrii wpływa na trajektorię głowicy i zużycie materiału.</p>
-
-  <h2>Wykonawstwo i realia budowy</h2>
-  <p>Drukarka pozycjonuje się po torach lub na masztach, głowica pracuje w osi XYZ, a sterownik synchronizuje przepływ mieszanki i ruch. Kluczowe wyzwania:</p> chcialbym, aby artykul mial takie same style jak w index, a najlepiej zeby byly tez stopki
-ChatGPT powiedział:
-
-Rozumiem – chcesz, żeby Twój artykuł nie był wyrwany z kontekstu, tylko wyglądał dokładnie tak, jak reszta strony (index), z tymi samymi stylami, układem, przyciskami, stopką i responsywnością. W praktyce oznacza to:
-
-    Artykuł w pełnym szablonie strony – nie tylko <article>…</article>, lecz cała struktura <!DOCTYPE html>, <head>, <header>, <main>, <footer>.
-
-    Korzystanie z tych samych klas CSS co w index: .container, .section, .card, .hero-cta, itp.
-
-    Stopki i nagłówki – takie same jak w index, w tym menu, logo, ikonki, kontakt, polityka prywatności.
-
-    Zdjęcia / grafiki – <picture> z srcset i loading="lazy" tam, gdzie to potrzebne.
-
-    Responsywność i gridy – artykuł można podzielić na sekcje .section i np. .grid dla ilustracji lub podrozdziałów.
-
-    Opcjonalnie CTA / linki do innych artykułów, jak w index (.btn.primary, .btn.secondary).
-
-Mogę od razu przygotować kompletny plik HTML dla Twojego artykułu, w pełnym szablonie strony, z tymi samymi stylami i stopką, żeby wklejenie go na serwis nie zmieniało wyglądu.
-
-Chcesz, żebym zrobił od razu gotowy plik HTML dla tego artykułu?
-Powiedziałeś(-aś):
-ok
-ChatGPT powiedział:
-
-Okej. Poniżej masz kompletny plik HTML dla Twojego artykułu, w pełnym szablonie zgodnym z index: nagłówek, style, menu, stopki i sekcje. Wszystkie klasy i struktury odpowiadają Twojej stronie głównej, więc wizualnie będzie spójnie.
-
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Druk 3D w budownictwie — Domy3D</title>
-  <meta name="description" content="Artykuł o druku 3D w budownictwie, technologie, koszty, projektowanie i realia wykonawcze.">
-  <link rel="canonical" href="https://domy3d.eu/articles/druk-3d-w-budownictwie.html">
-  <meta property="og:title" content="Druk 3D w budownictwie — Domy3D">
-  <meta property="og:description" content="Artykuł o druku 3D w budownictwie, technologie, koszty, projektowanie i realia wykonawcze.">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://domy3d.eu/articles/druk-3d-w-budownictwie.html">
-  <meta property="og:image" content="https://domy3d.eu/assets/img/fot2.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="/assets/icons/search.svg">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preload" as="image" href="/assets/img/fot2.png" imagesrcset="/assets/img/placeholder-1.svg 1600w, /assets/img/placeholder-2.svg 1200w" imagesizes="(max-width: 768px) 100vw, 1200px">
-
-  <style>
-  :root{--color-primary:#0B3D91;--color-accent:#0A8CFF;--color-text:#222;--space-5:24px;--radius-lg:18px}
-  body{margin:0;font:400 16px/1.6 "Inter",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--color-text)}
-  header.site-header{position:sticky;top:0;background:#fff;z-index:50;border-bottom:1px solid #e7e8ea}
-  .header-inner{display:flex;align-items:center;gap:24px;padding:16px 0}
-  .logo{font-weight:800;font-size:20px;color:var(--color-primary)}
-  .hero{display:grid;gap:48px;padding:48px 0}
-  .hero h1{font-size:44px;line-height:1.15;margin:0}
-  .lead{font-size:18px;color:#333;margin:0}
-  .cta, .btn{padding:10px 16px;background:var(--color-accent);color:#fff;border-radius:999px;border:0;font-weight:600;text-decoration:none;display:inline-block}
-  .btn.secondary{background:#ccc;color:#222}
-  .container{max-width:1200px;margin:0 auto;padding:0 24px}
-  main{padding:48px 0}
-  .section{margin-bottom:72px}
-  h2{font-size:28px;margin-bottom:16px}
-  h3{font-size:22px;margin-bottom:8px}
-  p, ul{margin-bottom:16px}
-  ul{padding-left:20px}
-  .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
-  figure{margin:0}
-  figcaption{margin-top:8px;font-size:14px;color:#555}
-  footer.site-footer{background:#f5f7fa;padding:48px 0 24px;color:#333;font-size:14px}
-  .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:24px;margin-bottom:24px}
-  .meta span{display:inline-block;margin-right:16px;font-size:13px;color:#666}
-  </style>
-
-  <link rel="preload" href="/assets/css/style.css" as="style" onload="this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="/assets/css/style.css"></noscript>
-  <script defer src="/assets/js/main.js"></script>
-</head>
-<body>
-<header class="site-header" role="banner">
-  <div class="container header-inner">
-    <a href="/" class="logo" aria-label="Domy3D — strona główna">
-      <img src="/assets/img/logo.png" alt="Domy3D — logo serwisu" width="132" height="28" decoding="async" />
-    </a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Otwórz lub zamknij menu">
-      <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
-        <path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3"/>
-      </svg>
-    </button>
-    <nav id="primary-nav" class="nav" aria-label="Główne menu">
-      <ul>
-        <li><a href="/druk-3d/">Druk 3D</a></li>
-        <li><a href="/projektowanie/">Projektowanie</a></li>
-        <li><a href="/wizualizacje/">Wizualizacje</a></li>
-        <li><a href="/articles/">Artykuły</a></li>
-        <li><a href="/contact/">Kontakt</a></li>
-        <li><a href="https://forum.domy3d.eu" class="btn secondary">Forum</a></li>
-      </ul>
-    </nav>
-    <a href="/search/" class="icon-search" aria-label="Wyszukaj w serwisie">
-      <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24">
-        <path d="M10 4a6 6 0 104.472 10.027l4.75 4.75 1.415-1.414-4.75-4.75A6 6 0 0010 4zm0 2a4 4 0 110 8 4 4 0 010-8z"/>
-      </svg>
-    </a>
-  </div>
-</header>
-
-<main id="main-content" class="container" role="main">
-  <section class="section hero" aria-label="Hero artykułu">
-    <h1>Druk 3D w budownictwie — technologie, koszty, projektowanie</h1>
-    <p class="lead">Przewodnik po drukowaniu 3D domów, materiałach, czasie realizacji i formalnościach.</p>
-    <hr class="hero-divider">
-  </section>
-
-  <article class="article-body section" aria-labelledby="art-title">
-    <h2 id="art-title">Druk 3D w budownictwie</h2>
-    <p><strong>Druk 3D w budownictwie</strong> od kilku lat przestaje być futurystyczną ciekawostką, a staje się realnym narzędziem pracy. Pierwsze pokazowe domy powstały już dekadę temu, lecz to dopiero rozwój systemów sterowania, kontroli jakości mieszanki oraz standaryzacja procesu umożliwiły stabilne wdrożenia. W Polsce wciąż mówimy o projektach pilotażowych i niewielkiej skali, ale rynek globalny dojrzał — firmy wykonawcze traktują druk 3D jako alternatywę lub uzupełnienie prefabrykacji.</p>
-
-    <h2>Jak działa druk 3D w budownictwie?</h2>
-    <p>Najczęściej drukuje się tynkowo-betonową mieszankę na bazie cementu lub geopolimerów, modyfikowaną dodatkami poprawiającymi reologię i czas wiązania. Materiał musi wypływać plastycznie, zachowywać kształt kolejnych warstw i szybko uzyskiwać nośność. W praktyce stosuje się receptury otwarte (dobierane przez wykonawcę) lub systemy zamknięte dostarczane przez producenta drukarki.</p>
-    <p>W obu przypadkach kluczowa jest kontrola wilgotności, temperatury i składu oraz kalibracja prędkości wytłaczania względem ruchu głowicy.</p>
-
-    <h2>Geometria ścian i projektowanie</h2>
-    <p>Najpopularniejszy układ to ściany warstwowe typu <em>shell-infill</em> — dwie równoległe ścianki z wypełnieniem komórkowym. Zapewnia on dobrą nośność przy umiarkowanej masie, a puste przestrzenie można wypełnić izolacją.</p>
-    <p>Taka konstrukcja daje projektantom dużą swobodę, lecz wymaga precyzyjnego planowania tras instalacyjnych, nadproży i stref montażu stolarki.</p>
-
-    <h2>Czas realizacji</h2>
-    <p>Segment parterowy 70–100 m² można wydrukować w 24–48 godzin roboczych rozbitych na kilka dni (zależnie od pogody). Druk obejmuje głównie ściany nośne i działowe — fundamenty, strop, dach i instalacje wykonywane są tradycyjnie.</p>
-    <p>Mimo to harmonogram skraca się o tygodnie dzięki redukcji etapów mokrych i mniejszemu uzależnieniu od dostępności murarzy.</p>
-
-    <h2>Koszty i logistyka</h2>
-    <p>Koszty druku ścian bywają zbliżone lub nieco niższe niż tradycyjnego murowania, jeśli liczyć robociznę i czas. Trzeba jednak doliczyć:</p>
-    <ul>
-      <li>transport dużej drukarki,</li>
-      <li>przygotowanie mieszanki (na miejscu lub z węzła),</li>
-      <li>serwis i amortyzację sprzętu,</li>
-      <li>ryzyko przestojów pogodowych.</li>
-    </ul>
-    <p>Coraz częściej pojawia się model <em>„drukowania jako usługi”</em>, gdzie wykonawca rozlicza się za metr bieżący ściany lub godzinę pracy urządzenia.</p>
-
-    <h2>Kwestie formalne</h2>
-    <p>Polskie prawo budowlane nie posiada osobnych norm dla druku 3D. Projektant musi wykazać spełnienie wymagań dotyczących nośności, stateczności, izolacyjności i bezpieczeństwa pożarowego poprzez:</p>
-    <ul>
-      <li>badania materiałowe,</li>
-      <li>obliczenia numeryczne,</li>
-      <li>odniesienie do norm konstrukcji murowych i betonowych.</li>
-    </ul>
-
-    <h2>Rola BIM i współpraca branżowa</h2>
-    <p>Model BIM staje się nie opcją, lecz koniecznością. Projekt powinien uwzględniać krzywizny, dylatacje, sposób kotwienia elementów nie drukowanych (np. ram okiennych) oraz ścieżki dla instalacji. Każda zmiana geometrii wpływa na trajektorię głowicy i zużycie materiału.</p>
-
-    <h2>Wykonawstwo i realia budowy</h2>
-    <p>Drukarka pozycjonuje się po torach lub na masztach, głowica pracuje w osi XYZ, a sterownik synchronizuje przepływ mieszanki i ruch. Kluczowe wyzwania obejmują precyzyjne planowanie, kalibrację urządzenia i monitorowanie pogody.</p>
-  </article>
-</main>
-
-<footer class="site-footer" role="contentinfo">
-  <div class="container footer-grid">
-    <div>
-      <h4>Kategorie</h4>
-      <ul>
-        <li><a href="/wizualizacje/">Wizualizacje</a></li>
-        <li><a href="/druk-3d/">Druk 3D</a></li>
-        <li><a href="/projektowanie/">Projektowanie</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Kontakt</h4>
-      <ul>
-        <li><a href="/contact/">Formularz</a></li>
-        <li><a href="mailto:aifuture@wp.pl">aifuture@wp.pl</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Prawo</h4>
-      <ul>
-        <li><a href="/privacy.md">Polityka prywatności</a></li>
-        <li><a href="/cookies.md">Cookies</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="container" style="padding-top:24px">
-    <small>&copy; 2025 Domy3D. Wszelkie prawa zastrzeżone.</small>
-  </div>
-</footer>
-</body>
-</html>
-
-Ten plik:
-
-    Ma takie same nagłówki, stopki, menu, style jak index.html.
-
-    Sekcje artykułu są w .section, używa .container.
-
-    Listy, nagłówki i paragrafy mają spójny spacing i fonty.
-
-    Możesz wklejać go bezpośrednio na serwis, a layout i styl będą identyczne.
-
-Jeżeli chcesz, mogę od razu dodać CTA do innych artykułów i mini-galerię obrazków w artykule, jak w index, żeby artykuł był bardziej interaktywny.
-
-Chcesz, żebym to zrobił?
-Powiedziałeś(-aś):
-co to jest cta
-ChatGPT powiedział:
-
-CTA to skrót od Call To Action, czyli „wezwanie do działania”.
-
-W praktyce w serwisach internetowych i artykułach oznacza element, który ma zachęcić użytkownika do wykonania konkretnej akcji, np.:
-
-    Kliknięcia przycisku („Czytaj dalej”, „Dowiedz się więcej”)
-
-    Zapisania się na newsletter
-
-    Pobrania pliku lub PDF
-
-    Obejrzania galerii, filmu lub produktu
-
-W Twoim kodzie index np.:
-
-<a class="btn primary" href="/articles/przyklad-druk-3d.html">Czytaj artykuły</a>
-<a class="btn secondary" href="/druk-3d/">Dowiedz się o druku 3D domów</a>
-
-To właśnie CTA – przyciski mające skłonić użytkownika do przejścia dalej w serwisie.
-
-W artykule możesz mieć np. CTA na końcu: „Sprawdź więcej artykułów o druku 3D” albo „Zobacz galerię koncepcyjną”.
-
-Mogę Ci przygotować takie CTA do Twojego artykułu, żeby pasowało stylem do strony. Chcesz, żebym to zrobił?
-Powiedziałeś(-aś):
-nie, popracujmy nad tym, aby poczatek artykulu byl lepszy. Druk 3D w budownictwie — technologie, koszty, projektowanie - to na pewno wykorzystuje h1 ? w miejsce kreski można by dodać zdjęcie, które na pierwszej stronie jest miniaturką
-ChatGPT powiedział:
-
-Dokładnie – tytuł artykułu w <h1> to standard SEO i strukturalny: każda strona powinna mieć jeden główny nagłówek <h1>.
-
-Jeżeli chcesz, żeby początek artykułu był bardziej atrakcyjny i spójny z index, można zrobić tak:
-
-    Zamiast kreski i samego tytułu użyć sekcji hero podobnej do tej na index, czyli:
-
-        Mały obrazek-miniaturkę artykułu po prawej lub nad tekstem (np. /assets/img/fot2.png lub inna miniatura).
-
-        Po lewej tytuł w <h1> i krótki lead/intro w <p class="lead">.
-
-    Taka struktura będzie wyglądała podobnie do strony głównej, z zachowaniem spójnego układu .hero-text i .hero-image.
-
-Przykładowa struktura hero na artykule:
-
-<section class="section hero" aria-label="Hero artykułu">
-  <div class="hero-text">
-    <h1>Druk 3D w budownictwie</h1>
-    <p class="lead">Poznaj technologie, koszty, projektowanie i realia wykonawcze drukowanych domów.</p>
-  </div>
-  <div class="hero-image">
-    <img src="/assets/img/fot2.png" width="600" height="338" alt="Miniatura artykułu: druk 3D w budownictwie">
-  </div>
-</section>
-
-    .hero-text i .hero-image mogą być ustawione w grid lub flex, żeby wyglądało nowocześnie i responsywnie.
-
-    Miniaturka artykułu w hero będzie powiązana wizualnie z index (jak karta artykułu w sekcji „Najnowsze artykuły”).
-
-Mogę od razu przerobić Twój plik artykułu, żeby hero było zgodne z index i ładnie wprowadzało w artykuł.
-
-Chcesz, żebym tak zrobił?
-Powiedziałeś(-aś):
-ok, przerób to 
-ChatGPT powiedział:
-
-Świetnie. Poniżej masz kompletny plik artykułu z nowym hero, spójnym z index: tytuł w <h1>, lead, oraz miniaturka po prawej stronie. Układ jest responsywny i wygląda jak sekcja „hero” z index.
-
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Druk 3D w budownictwie — Domy3D</title>
-  <meta name="description" content="Artykuł o druku 3D w budownictwie, technologie, koszty, projektowanie i realia wykonawcze.">
-  <link rel="canonical" href="https://domy3d.eu/articles/druk-3d-w-budownictwie.html">
-  <meta property="og:title" content="Druk 3D w budownictwie — Domy3D">
-  <meta property="og:description" content="Artykuł o druku 3D w budownictwie, technologie, koszty, projektowanie i realia wykonawcze.">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://domy3d.eu/articles/druk-3d-w-budownictwie.html">
-  <meta property="og:image" content="https://domy3d.eu/assets/img/fot2.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="/assets/icons/search.svg">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preload" as="image" href="/assets/img/fot2.png" imagesrcset="/assets/img/placeholder-1.svg 1600w, /assets/img/placeholder-2.svg 1200w" imagesizes="(max-width: 768px) 100vw, 1200px">
-
-  <style>
-  :root{--color-primary:#0B3D91;--color-accent:#0A8CFF;--color-text:#222;--space-5:24px;--radius-lg:18px}
-  body{margin:0;font:400 16px/1.6 "Inter",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--color-text)}
-  header.site-header{position:sticky;top:0;background:#fff;z-index:50;border-bottom:1px solid #e7e8ea}
-  .header-inner{display:flex;align-items:center;gap:24px;padding:16px 0}
-  .logo{font-weight:800;font-size:20px;color:var(--color-primary)}
-  .hero{display:grid;gap:24px;grid-template-columns:1fr 1fr;align-items:center;padding:48px 0}
-  @media(max-width:768px){.hero{grid-template-columns:1fr;gap:16px}}
-  .hero-text h1{font-size:36px;line-height:1.2;margin:0}
-  .lead{font-size:18px;color:#333;margin-top:16px}
-  .container{max-width:1200px;margin:0 auto;padding:0 24px}
-  .section{margin-bottom:72px}
-  h2{font-size:28px;margin-bottom:16px}
-  h3{font-size:22px;margin-bottom:8px}
-  p, ul{margin-bottom:16px}
-  ul{padding-left:20px}
-  .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
-  figure{margin:0}
-  figcaption{margin-top:8px;font-size:14px;color:#555}
-  footer.site-footer{background:#f5f7fa;padding:48px 0 24px;color:#333;font-size:14px}
-  .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:24px;margin-bottom:24px}
-  .meta span{display:inline-block;margin-right:16px;font-size:13px;color:#666}
-  </style>
-
-  <link rel="preload" href="/assets/css/style.css" as="style" onload="this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="/assets/css/style.css"></noscript>
-  <script defer src="/assets/js/main.js"></script>
-</head>
-<body>
-<header class="site-header" role="banner">
-  <div class="container header-inner">
-    <a href="/" class="logo" aria-label="Domy3D — strona główna">
-      <img src="/assets/img/logo.png" alt="Domy3D — logo serwisu" width="132" height="28" decoding="async" />
-    </a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Otwórz lub zamknij menu">
-      <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
-        <path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3"/>
-      </svg>
-    </button>
-    <nav id="primary-nav" class="nav" aria-label="Główne menu">
-      <ul>
-        <li><a href="/druk-3d/">Druk 3D</a></li>
-        <li><a href="/projektowanie/">Projektowanie</a></li>
-        <li><a href="/wizualizacje/">Wizualizacje</a></li>
-        <li><a href="/articles/">Artykuły</a></li>
-        <li><a href="/contact/">Kontakt</a></li>
-        <li><a href="https://forum.domy3d.eu" class="btn secondary">Forum</a></li>
-      </ul>
-    </nav>
-    <a href="/search/" class="icon-search" aria-label="Wyszukaj w serwisie">
-      <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24">
-        <path d="M10 4a6 6 0 104.472 10.027l4.75 4.75 1.415-1.414-4.75-4.75A6 6 0 0010 4zm0 2a4 4 0 110 8 4 4 0 010-8z"/>
-      </svg>
-    </a>
-  </div>
-</header>
-
-<main id="main-content" class="container" role="main">
-
-  <!-- Hero artykułu -->
-  <section class="section hero" aria-label="Hero artykułu">
-    <div class="hero-text">
-      <h1>Druk 3D w budownictwie</h1>
-      <p class="lead">Poznaj technologie, koszty, projektowanie i realia wykonawcze drukowanych domów.</p>
-    </div>
-    <div class="hero-image">
-      <img src="/assets/img/fot2.png" width="600" height="338" alt="Miniatura artykułu: druk 3D w budownictwie">
-    </div>
-  </section>
-
-  <article class="article-body section" aria-labelledby="art-content">
-    <h2 id="art-content">Druk 3D w budownictwie — wprowadzenie</h2>
-    <p>Druk 3D w budownictwie od kilku lat przestaje być futurystyczną ciekawostką, a staje się realnym narzędziem pracy. Pierwsze pokazowe domy powstały już dekadę temu, lecz to dopiero rozwój systemów sterowania, kontroli jakości mieszanki oraz standaryzacja procesu umożliwiły stabilne wdrożenia. W Polsce wciąż mówimy o projektach pilotażowych i niewielkiej skali, ale rynek globalny dojrzał — firmy wykonawcze traktują druk 3D jako alternatywę lub uzupełnienie prefabrykacji.</p>
-
-    <h2>Jak działa druk 3D w budownictwie?</h2>
-    <p>Najczęściej drukuje się tynkowo-betonową mieszankę na bazie cementu lub geopolimerów, modyfikowaną dodatkami poprawiającymi reologię i czas wiązania. Materiał musi wypływać plastycznie, zachowywać kształt kolejnych warstw i szybko uzyskiwać nośność. W praktyce stosuje się receptury otwarte (dobierane przez wykonawcę) lub systemy zamknięte dostarczane przez producenta drukarki.</p>
-    <p>W obu przypadkach kluczowa jest kontrola wilgotności, temperatury i składu oraz kalibracja prędkości wytłaczania względem ruchu głowicy.</p>
-
-    <h2>Geometria ścian i projektowanie</h2>
-    <p>Najpopularniejszy układ to ściany warstwowe typu <em>shell-infill</em> — dwie równoległe ścianki z wypełnieniem komórkowym. Zapewnia on dobrą nośność przy umiarkowanej masie, a puste przestrzenie można wypełnić izolacją.</p>
-    <p>Taka konstrukcja daje projektantom dużą swobodę, lecz wymaga precyzyjnego planowania tras instalacyjnych, nadproży i stref montażu stolarki.</p>
-
-    <h2>Czas realizacji</h2>
-    <p>Segment parterowy 70–100 m² można wydrukować w 24–48 godzin roboczych rozbitych na kilka dni (zależnie od pogody). Druk obejmuje głównie ściany nośne i działowe — fundamenty, strop, dach i instalacje wykonywane są tradycyjnie.</p>
-    <p>Mimo to harmonogram skraca się o tygodnie dzięki redukcji etapów mokrych i mniejszemu uzależnieniu od dostępności murarzy.</p>
-
-    <h2>Koszty i logistyka</h2>
-    <p>Koszty druku ścian bywają zbliżone lub nieco niższe niż tradycyjnego murowania, jeśli liczyć robociznę i czas. Trzeba jednak doliczyć:</p>
-    <ul>
-      <li>transport dużej drukarki,</li>
-      <li>przygotowanie mieszanki (na miejscu lub z węzła),</li>
-      <li>serwis i amortyzację sprzętu,</li>
-      <li>ryzyko przestojów pogodowych.</li>
-    </ul>
-    <p>Coraz częściej pojawia się model <em>„drukowania jako usługi”</em>, gdzie wykonawca rozlicza się za metr bieżący ściany lub godzinę pracy urządzenia.</p>
-
-    <h2>Kwestie formalne</h2>
-    <p>Polskie prawo budowlane nie posiada osobnych norm dla druku 3D. Projektant musi wykazać spełnienie wymagań dotyczących nośności, stateczności, izolacyjności i bezpieczeństwa pożarowego poprzez:</p>
-    <ul>
-      <li>badania materiałowe,</li>
-      <li>obliczenia numeryczne,</li>
-      <li>odniesienie do norm konstrukcji murowych i betonowych.</li>
-    </ul>
-
-    <h2>Rola BIM i współpraca branżowa</h2>
-    <p>Model BIM staje się nie opcją, lecz koniecznością. Projekt powinien uwzględniać krzywizny, dylatacje, sposób kotwienia elementów nie drukowanych (np. ram okiennych) oraz ścieżki dla instalacji. Każda zmiana geometrii wpływa na trajektorię głowicy i zużycie materiału.</p>
-
-    <h2>Wykonawstwo i realia budowy</h2>
-    <p>Drukarka pozycjonuje się po torach lub na masztach, głowica pracuje w osi XYZ, a sterownik synchronizuje przepływ mieszanki i ruch. Kluczowe wyzwania to precyzja, tempo i warunki pogodowe.</p>
-  </article>
-</main>
-
-<footer class="site-footer" role="contentinfo">
-  <div class="container footer-grid">
-    <div>
-      <h4>Kategorie</h4>
-      <ul>
-        <li><a href="/wizualizacje/">Wizualizacje</a></li>
-        <li><a href="/druk-3d/">Druk 3D</a></li>
-        <li><a href="/projektowanie/">Projektowanie</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Kontakt</h4>
-      <ul>
-        <li><a href="/contact/">Formularz</a></li>
-        <li><a href="mailto:aifuture@wp.pl">aifuture@wp.pl</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Prawo</h4>
-      <ul>
-        <li><a href="/privacy.md">Polityka prywatności</a></li>
-        <li><a href="/cookies.md">Cookies</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="container" style="padding-top:24px">
-    <small>&copy; 2025 Domy3D. Wszelkie prawa zastrzeżone.</small>
-  </div>
-</footer>
+  <script src="/assets/js/main.min.js" defer></script>
 </body>
 </html>
