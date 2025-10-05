@@ -158,34 +158,26 @@
 })();
 
 // -------- Filtr tagów
-(function(){
-  const tags = document.querySelectorAll('.tag');
-  const articles = document.querySelectorAll('.card');
-
-  if(!tags.length || !articles.length) return;
-
-  tags.forEach(tag=>{
-    tag.addEventListener('click', ()=>{
-      const tagText = tag.textContent.trim();
-      
-      // filtruj artykuły
-      articles.forEach(article=>{
-        const articleTags = Array.from(article.querySelectorAll('.tag')).map(t=>t.textContent.trim());
-        article.style.display = articleTags.includes(tagText) ? '' : 'none';
-      });
-
-      // opcjonalnie: zmień URL bez przeładowania
-      const url = new URL(window.location);
-      url.searchParams.set('tag', tagText);
-      window.history.replaceState({}, '', url);
+// kliknięcie tagu
+tags.forEach(tag=>{
+  tag.addEventListener('click', ()=>{
+    const tagText = tag.textContent.trim();
+    
+    // filtruj artykuły
+    articles.forEach(article=>{
+      const articleTags = Array.from(article.querySelectorAll('.tag')).map(t=>t.textContent.trim());
+      article.style.display = articleTags.includes(tagText) ? '' : 'none';
     });
-  });
 
-  // jeśli URL ma ?tag=... -> automatycznie filtruj przy starcie
-  const params = new URLSearchParams(window.location.search);
-  const activeTag = params.get('tag');
-  if(activeTag){
-    const el = Array.from(tags).find(t => t.textContent.trim()===activeTag);
-    if(el) el.click();
-  }
-})();
+    // ustaw hash zamiast query string
+    window.location.hash = 'tag=' + encodeURIComponent(tagText);
+  });
+});
+
+// filtr przy starcie
+const hash = window.location.hash;
+if(hash.startsWith('#tag=')){
+  const activeTag = decodeURIComponent(hash.replace('#tag=', ''));
+  const el = Array.from(tags).find(t => t.textContent.trim()===activeTag);
+  if(el) el.click();
+}
