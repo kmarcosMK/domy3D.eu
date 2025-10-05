@@ -54,7 +54,7 @@
   if(!banner) return;
 
   // Uzupełnij tutaj swoim Measurement ID (np. G-ABCDEFG12)
-  var GA_MEASUREMENT_ID = 'G-XXXXXXX';
+  var GA_MEASUREMENT_ID = 'GTM-PR2LCD85';
   var analyticsLoaded = false;
 
   function loadAnalytics(){
