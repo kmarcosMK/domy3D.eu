@@ -130,6 +130,16 @@ header.site-header {
   transform: scale(1.04);
 }
 
+/*kreska w hero */
+.hero-divider {
+  border: 0;
+  height: 2px;
+  background: var(--color-accent);
+  width: 60px;       /* długość kreski */
+  margin: 24px 0;    /* odstęp od tekstu */
+}
+
+
 /* Responsywność */
 @media (max-width: 960px) {
   .hero {
