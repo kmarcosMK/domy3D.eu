@@ -210,3 +210,66 @@ header.site-header {
 .tag:active {
   transform: translateY(0);
 }
+/* ========== STOPKA ========== */
+.site-footer {
+  background: #0B3D91; /* nowy kolor tła stopki */
+  color: #ffffff;
+  padding: 60px 24px 24px; /* góra, boki, dół */
+}
+
+.site-footer h4 {
+  margin-bottom: 16px;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.site-footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.site-footer a:hover, .site-footer a:focus {
+  text-decoration: underline;
+}
+
+/* kontener kolumnowy */
+.footer-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: var(--maxw);
+  margin: 0 auto;
+}
+
+.footer-grid > div {
+  flex: 1 1 200px; /* minimalna szerokość kolumny 200px */
+}
+
+/* lista w stopce */
+.site-footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.site-footer ul li {
+  margin-bottom: 8px;
+}
+
+/* dolna część stopki */
+.site-footer small {
+  display: block;
+  margin-top: 40px;
+  text-align: center;
+  color: rgba(255,255,255,0.7);
+  font-size: 13px;
+}
+
+/* responsywność */
+@media (max-width: 768px) {
+  .footer-grid {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
