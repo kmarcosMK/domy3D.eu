@@ -135,8 +135,8 @@ header.site-header {
   border: 0;
   height: 2px;
   background: var(--color-accent);
-  width: 60px;       /* długość kreski */
-  margin: 24px 0;    /* odstęp od tekstu */
+  width: 80%;        /* 80% szerokości kontenera hero-text */
+  margin: 24px auto; /* 24px odstępu od tekstu + wyśrodkowanie */
 }
 
 
