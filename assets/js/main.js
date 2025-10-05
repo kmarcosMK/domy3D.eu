@@ -47,36 +47,73 @@
     });
   })();
 
-  // -------- Cookie banner
-  (function(){
-    var KEY = 'domy3d_cookie_consent';
-    var banner  = $('#cookie-banner');
-    if(!banner) return;
+  // -------- Cookie banner + Analytics (consent-based)
+(function(){
+  var KEY = 'domy3d_cookie_consent';
+  var banner  = $('#cookie-banner');
+  if(!banner) return;
 
-    var accept  = $('#cookie-accept');
-    var close   = $('#cookie-close');
-    var xbtn    = $('#cookie-x');
+  // Uzupełnij tutaj swoim Measurement ID (np. G-ABCDEFG12)
+  var GA_MEASUREMENT_ID = 'G-XXXXXXX';
+  var analyticsLoaded = false;
 
-    function get(key){
-      try { return localStorage.getItem(key); } catch(_) { return null; }
-    }
-    function set(key, val){
-      try { localStorage.setItem(key, val); } catch(_) {}
-    }
-    function dismiss(consented){
-      if(consented) set(KEY, 'accepted');
-      banner.hidden = true;
-    }
+  function loadAnalytics(){
+    if(analyticsLoaded) return;
+    analyticsLoaded = true;
 
-    if(!get(KEY)){ banner.hidden = false; }
+    // dodaj skrypt gtag.js
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_MEASUREMENT_ID;
+    document.head.appendChild(s);
 
-    on(accept, 'click', function(){ dismiss(true); });
-    on(close,  'click', function(){ dismiss(false); });
-    on(xbtn,   'click', function(){ dismiss(false); });
-    on(document, 'keydown', function(e){
-      if(e.key === 'Escape' && !banner.hidden) dismiss(false);
-    });
-  })();
+    // initialize gtag
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    window.gtag = window.gtag || gtag;
+    gtag('js', new Date());
+    // anonimyzacja IP + uruchomienie konfiguracji
+    gtag('config', GA_MEASUREMENT_ID, { 'anonymize_ip': true });
+  }
+
+  function get(key){
+    try { return localStorage.getItem(key); } catch(_) { return null; }
+  }
+  function set(key, val){
+    try { localStorage.setItem(key, val); } catch(_) {}
+  }
+
+  var accept  = $('#cookie-accept');
+  var close   = $('#cookie-close');
+  var xbtn    = $('#cookie-x');
+
+  function hideBanner(){ banner.hidden = true; }
+
+  // jeśli wcześniej zaakceptowano — ładuj analytics automatycznie
+  if(get(KEY) === 'accepted') {
+    hideBanner();
+    loadAnalytics();
+  } else {
+    banner.hidden = false;
+  }
+
+  function acceptHandler(){
+    set(KEY, 'accepted');
+    hideBanner();
+    loadAnalytics();
+  }
+  function closeHandler(){
+    hideBanner();
+  }
+
+  on(accept, 'click', acceptHandler);
+  on(close, 'click', closeHandler);
+  on(xbtn, 'click', closeHandler);
+  on(document, 'keydown', function(e){
+    if(e.key === 'Escape' && !banner.hidden) closeHandler();
+  });
+})();
+
 
   // -------- Reading time (opcjonalne)
   $$( '[data-reading-time]' ).forEach(function(el){
