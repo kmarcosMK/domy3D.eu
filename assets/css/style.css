@@ -189,4 +189,24 @@ header.site-header {
 
 /* Tagi */
 .tags { display:flex; gap:8px; flex-wrap:wrap; }
-.tag { font-size:12px; background:#eef5ff; border:1px solid #d7e9ff; border-radius:6px; padding:3px 8px; color:#0056d6; }
+.tag {
+  font-size:12px;
+  background:#eef5ff;
+  border:1px solid #d7e9ff;
+  border-radius:6px;
+  padding:3px 8px;
+  color:#0056d6;
+  cursor:pointer;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
+  text-decoration:none;
+}
+
+.tag:hover, .tag:focus {
+  background:#d7e9ff;
+  color:#003d99;
+  transform: translateY(-2px);
+}
+
+.tag:active {
+  transform: translateY(0);
+}
