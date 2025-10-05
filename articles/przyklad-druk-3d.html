@@ -1,39 +1,158 @@
-<article class="article-body">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Druk 3D w budownictwie — Domy3D</title>
+  <meta name="description" content="Artykuł o druku 3D w budownictwie, technologie, koszty, projektowanie i realia wykonawcze.">
+  <link rel="canonical" href="https://domy3d.eu/articles/druk-3d-w-budownictwie.html">
+  <meta property="og:title" content="Druk 3D w budownictwie — Domy3D">
+  <meta property="og:description" content="Artykuł o druku 3D w budownictwie, technologie, koszty, projektowanie i realia wykonawcze.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://domy3d.eu/articles/druk-3d-w-budownictwie.html">
+  <meta property="og:image" content="https://domy3d.eu/assets/img/fot2.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/assets/icons/search.svg">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preload" as="image" href="/assets/img/fot2.png" imagesrcset="/assets/img/placeholder-1.svg 1600w, /assets/img/placeholder-2.svg 1200w" imagesizes="(max-width: 768px) 100vw, 1200px">
 
-  <p><strong>Druk 3D w budownictwie</strong> od kilku lat przestaje być futurystyczną ciekawostką, a staje się realnym narzędziem pracy. Pierwsze pokazowe domy powstały już dekadę temu, lecz to dopiero rozwój systemów sterowania, kontroli jakości mieszanki oraz standaryzacja procesu umożliwiły stabilne wdrożenia. W Polsce wciąż mówimy o projektach pilotażowych i niewielkiej skali, ale rynek globalny dojrzał — firmy wykonawcze traktują druk 3D jako alternatywę lub uzupełnienie prefabrykacji.</p>
+  <style>
+  :root{--color-primary:#0B3D91;--color-accent:#0A8CFF;--color-text:#222;--space-5:24px;--radius-lg:18px}
+  body{margin:0;font:400 16px/1.6 "Inter",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--color-text)}
+  header.site-header{position:sticky;top:0;background:#fff;z-index:50;border-bottom:1px solid #e7e8ea}
+  .header-inner{display:flex;align-items:center;gap:24px;padding:16px 0}
+  .logo{font-weight:800;font-size:20px;color:var(--color-primary)}
+  .hero{display:grid;gap:48px;padding:48px 0}
+  .hero h1{font-size:44px;line-height:1.15;margin:0}
+  .lead{font-size:18px;color:#333;margin:0}
+  .cta, .btn{padding:10px 16px;background:var(--color-accent);color:#fff;border-radius:999px;border:0;font-weight:600;text-decoration:none;display:inline-block}
+  .btn.secondary{background:#ccc;color:#222}
+  .container{max-width:1200px;margin:0 auto;padding:0 24px}
+  main{padding:48px 0}
+  .section{margin-bottom:72px}
+  h2{font-size:28px;margin-bottom:16px}
+  h3{font-size:22px;margin-bottom:8px}
+  p, ul{margin-bottom:16px}
+  ul{padding-left:20px}
+  .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+  figure{margin:0}
+  figcaption{margin-top:8px;font-size:14px;color:#555}
+  footer.site-footer{background:#f5f7fa;padding:48px 0 24px;color:#333;font-size:14px}
+  .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:24px;margin-bottom:24px}
+  .meta span{display:inline-block;margin-right:16px;font-size:13px;color:#666}
+  </style>
 
-  <h2>Jak działa druk 3D w budownictwie?</h2>
-  <p>Najczęściej drukuje się tynkowo-betonową mieszankę na bazie cementu lub geopolimerów, modyfikowaną dodatkami poprawiającymi reologię i czas wiązania. Materiał musi wypływać plastycznie, zachowywać kształt kolejnych warstw i szybko uzyskiwać nośność. W praktyce stosuje się receptury otwarte (dobierane przez wykonawcę) lub systemy zamknięte dostarczane przez producenta drukarki.</p>
-  <p>W obu przypadkach kluczowa jest kontrola wilgotności, temperatury i składu oraz kalibracja prędkości wytłaczania względem ruchu głowicy.</p>
+  <link rel="preload" href="/assets/css/style.css" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/assets/css/style.css"></noscript>
+  <script defer src="/assets/js/main.js"></script>
+</head>
+<body>
+<header class="site-header" role="banner">
+  <div class="container header-inner">
+    <a href="/" class="logo" aria-label="Domy3D — strona główna">
+      <img src="/assets/img/logo.png" alt="Domy3D — logo serwisu" width="132" height="28" decoding="async" />
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Otwórz lub zamknij menu">
+      <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3"/>
+      </svg>
+    </button>
+    <nav id="primary-nav" class="nav" aria-label="Główne menu">
+      <ul>
+        <li><a href="/druk-3d/">Druk 3D</a></li>
+        <li><a href="/projektowanie/">Projektowanie</a></li>
+        <li><a href="/wizualizacje/">Wizualizacje</a></li>
+        <li><a href="/articles/">Artykuły</a></li>
+        <li><a href="/contact/">Kontakt</a></li>
+        <li><a href="https://forum.domy3d.eu" class="btn secondary">Forum</a></li>
+      </ul>
+    </nav>
+    <a href="/search/" class="icon-search" aria-label="Wyszukaj w serwisie">
+      <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24">
+        <path d="M10 4a6 6 0 104.472 10.027l4.75 4.75 1.415-1.414-4.75-4.75A6 6 0 0010 4zm0 2a4 4 0 110 8 4 4 0 010-8z"/>
+      </svg>
+    </a>
+  </div>
+</header>
 
-  <h2>Geometria ścian i projektowanie</h2>
-  <p>Najpopularniejszy układ to ściany warstwowe typu <em>shell-infill</em> — dwie równoległe ścianki z wypełnieniem komórkowym. Zapewnia on dobrą nośność przy umiarkowanej masie, a puste przestrzenie można wypełnić izolacją.</p>
-  <p>Taka konstrukcja daje projektantom dużą swobodę, lecz wymaga precyzyjnego planowania tras instalacyjnych, nadproży i stref montażu stolarki.</p>
+<main id="main-content" class="container" role="main">
+  <section class="section hero" aria-label="Hero artykułu">
+    <h1>Druk 3D w budownictwie — technologie, koszty, projektowanie</h1>
+    <p class="lead">Przewodnik po drukowaniu 3D domów, materiałach, czasie realizacji i formalnościach.</p>
+    <hr class="hero-divider">
+  </section>
 
-  <h2>Czas realizacji</h2>
-  <p>Segment parterowy 70–100 m² można wydrukować w 24–48 godzin roboczych rozbitych na kilka dni (zależnie od pogody). Druk obejmuje głównie ściany nośne i działowe — fundamenty, strop, dach i instalacje wykonywane są tradycyjnie.</p>
-  <p>Mimo to harmonogram skraca się o tygodnie dzięki redukcji etapów mokrych i mniejszemu uzależnieniu od dostępności murarzy.</p>
+  <article class="article-body section" aria-labelledby="art-title">
+    <h2 id="art-title">Druk 3D w budownictwie</h2>
+    <p><strong>Druk 3D w budownictwie</strong> od kilku lat przestaje być futurystyczną ciekawostką, a staje się realnym narzędziem pracy. Pierwsze pokazowe domy powstały już dekadę temu, lecz to dopiero rozwój systemów sterowania, kontroli jakości mieszanki oraz standaryzacja procesu umożliwiły stabilne wdrożenia. W Polsce wciąż mówimy o projektach pilotażowych i niewielkiej skali, ale rynek globalny dojrzał — firmy wykonawcze traktują druk 3D jako alternatywę lub uzupełnienie prefabrykacji.</p>
 
-  <h2>Koszty i logistyka</h2>
-  <p>Koszty druku ścian bywają zbliżone lub nieco niższe niż tradycyjnego murowania, jeśli liczyć robociznę i czas. Trzeba jednak doliczyć:</p>
-  <ul>
-    <li>transport dużej drukarki,</li>
-    <li>przygotowanie mieszanki (na miejscu lub z węzła),</li>
-    <li>serwis i amortyzację sprzętu,</li>
-    <li>ryzyko przestojów pogodowych.</li>
-  </ul>
-  <p>Coraz częściej pojawia się model <em>„drukowania jako usługi”</em>, gdzie wykonawca rozlicza się za metr bieżący ściany lub godzinę pracy urządzenia.</p>
+    <h2>Jak działa druk 3D w budownictwie?</h2>
+    <p>Najczęściej drukuje się tynkowo-betonową mieszankę na bazie cementu lub geopolimerów, modyfikowaną dodatkami poprawiającymi reologię i czas wiązania. Materiał musi wypływać plastycznie, zachowywać kształt kolejnych warstw i szybko uzyskiwać nośność. W praktyce stosuje się receptury otwarte (dobierane przez wykonawcę) lub systemy zamknięte dostarczane przez producenta drukarki.</p>
+    <p>W obu przypadkach kluczowa jest kontrola wilgotności, temperatury i składu oraz kalibracja prędkości wytłaczania względem ruchu głowicy.</p>
 
-  <h2>Kwestie formalne</h2>
-  <p>Polskie prawo budowlane nie posiada osobnych norm dla druku 3D. Projektant musi wykazać spełnienie wymagań dotyczących nośności, stateczności, izolacyjności i bezpieczeństwa pożarowego poprzez:</p>
-  <ul>
-    <li>badania materiałowe,</li>
-    <li>obliczenia numeryczne,</li>
-    <li>odniesienie do norm konstrukcji murowych i betonowych.</li>
-  </ul>
+    <h2>Geometria ścian i projektowanie</h2>
+    <p>Najpopularniejszy układ to ściany warstwowe typu <em>shell-infill</em> — dwie równoległe ścianki z wypełnieniem komórkowym. Zapewnia on dobrą nośność przy umiarkowanej masie, a puste przestrzenie można wypełnić izolacją.</p>
+    <p>Taka konstrukcja daje projektantom dużą swobodę, lecz wymaga precyzyjnego planowania tras instalacyjnych, nadproży i stref montażu stolarki.</p>
 
-  <h2>Rola BIM i współpraca branżowa</h2>
-  <p>Model BIM staje się nie opcją, lecz koniecznością. Projekt powinien uwzględniać krzywizny, dylatacje, sposób kotwienia elementów nie drukowanych (np. ram okiennych) oraz ścieżki dla instalacji. Każda zmiana geometrii wpływa na trajektorię głowicy i zużycie materiału.</p>
+    <h2>Czas realizacji</h2>
+    <p>Segment parterowy 70–100 m² można wydrukować w 24–48 godzin roboczych rozbitych na kilka dni (zależnie od pogody). Druk obejmuje głównie ściany nośne i działowe — fundamenty, strop, dach i instalacje wykonywane są tradycyjnie.</p>
+    <p>Mimo to harmonogram skraca się o tygodnie dzięki redukcji etapów mokrych i mniejszemu uzależnieniu od dostępności murarzy.</p>
 
-  <h2>Wykonawstwo i realia budowy</h2>
-  <p>Drukarka pozycjonuje się po torach lub na masztach, głowica pracuje w osi XYZ, a sterownik synchronizuje przepływ mieszanki i ruch. Kluczowe wyzwania:</p>
+    <h2>Koszty i logistyka</h2>
+    <p>Koszty druku ścian bywają zbliżone lub nieco niższe niż tradycyjnego murowania, jeśli liczyć robociznę i czas. Trzeba jednak doliczyć:</p>
+    <ul>
+      <li>transport dużej drukarki,</li>
+      <li>przygotowanie mieszanki (na miejscu lub z węzła),</li>
+      <li>serwis i amortyzację sprzętu,</li>
+      <li>ryzyko przestojów pogodowych.</li>
+    </ul>
+    <p>Coraz częściej pojawia się model <em>„drukowania jako usługi”</em>, gdzie wykonawca rozlicza się za metr bieżący ściany lub godzinę pracy urządzenia.</p>
+
+    <h2>Kwestie formalne</h2>
+    <p>Polskie prawo budowlane nie posiada osobnych norm dla druku 3D. Projektant musi wykazać spełnienie wymagań dotyczących nośności, stateczności, izolacyjności i bezpieczeństwa pożarowego poprzez:</p>
+    <ul>
+      <li>badania materiałowe,</li>
+      <li>obliczenia numeryczne,</li>
+      <li>odniesienie do norm konstrukcji murowych i betonowych.</li>
+    </ul>
+
+    <h2>Rola BIM i współpraca branżowa</h2>
+    <p>Model BIM staje się nie opcją, lecz koniecznością. Projekt powinien uwzględniać krzywizny, dylatacje, sposób kotwienia elementów nie drukowanych (np. ram okiennych) oraz ścieżki dla instalacji. Każda zmiana geometrii wpływa na trajektorię głowicy i zużycie materiału.</p>
+
+    <h2>Wykonawstwo i realia budowy</h2>
+    <p>Drukarka pozycjonuje się po torach lub na masztach, głowica pracuje w osi XYZ, a sterownik synchronizuje przepływ mieszanki i ruch. Kluczowe wyzwania obejmują precyzyjne planowanie, kalibrację urządzenia i monitorowanie pogody.</p>
+  </article>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container footer-grid">
+    <div>
+      <h4>Kategorie</h4>
+      <ul>
+        <li><a href="/wizualizacje/">Wizualizacje</a></li>
+        <li><a href="/druk-3d/">Druk 3D</a></li>
+        <li><a href="/projektowanie/">Projektowanie</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Kontakt</h4>
+      <ul>
+        <li><a href="/contact/">Formularz</a></li>
+        <li><a href="mailto:aifuture@wp.pl">aifuture@wp.pl</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Prawo</h4>
+      <ul>
+        <li><a href="/privacy.md">Polityka prywatności</a></li>
+        <li><a href="/cookies.md">Cookies</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container" style="padding-top:24px">
+    <small>&copy; 2025 Domy3D. Wszelkie prawa zastrzeżone.</small>
+  </div>
+</footer>
+</body>
+</html>
