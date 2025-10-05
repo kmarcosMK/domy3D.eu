@@ -3,7 +3,7 @@
    poprawione focus/hover, zachowany layout i rozmiary obrazów.
 */
 
-/* ========== VARIABLES ========== */
+/* ========== ZMIENNE ========== */
 :root{
   --color-primary:#0B3D91;
   --color-accent:#0A8CFF;
@@ -18,7 +18,7 @@
   --shadow-2: 0 12px 36px rgba(12,18,30,0.08);
 }
 
-/* ========== BASE ========== */
+/* ========== PODSTAWA ========== */
 html { box-sizing: border-box; scroll-behavior: smooth; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
 *,*:before,*:after { box-sizing: inherit; }
 body { margin:0; background:var(--color-bg); color:var(--color-text); font:400 var(--fs-base)/1.6 var(--font-base); -webkit-text-size-adjust:100%; }
@@ -26,13 +26,13 @@ img { max-width:100%; height:auto; display:block; }
 a { color:var(--color-primary); text-decoration:none; }
 a:focus, button:focus, .btn:focus { outline:3px solid rgba(10,140,255,0.18); outline-offset:3px; border-radius:8px; }
 
-/* Utility hidden for accessibility */
+/* Ukrycie dla dostępności */
 .hidden { position:absolute!important; left:-9999px!important; top:auto!important; width:1px; height:1px; overflow:hidden; }
 
-/* ========== LAYOUT CONTAINERS ========== */
+/* ========== KONTAINERY UKŁADU ========== */
 .container { max-width:var(--maxw); margin:0 auto; padding:0 var(--space-5); }
 
-/* ========== HEADER / NAV ========== */
+/* ========== NAGŁÓWEK / NAWIGACJA ========== */
 header.site-header {
   position:sticky; top:0; background:#fff; z-index:50; border-bottom:1px solid #e7e8ea;
 }
@@ -43,77 +43,7 @@ header.site-header {
 .logo { font-weight:800; font-size:20px; letter-spacing:0.2px; color:var(--color-primary); display:flex; align-items:center; gap:12px; }
 .logo img { display:block; height:auto; }
 
-/* Nav */
-.nav { display:none; } /* mobile-first: hidden on small screens */
+/* Nawigacja */
+.nav { display:none; } /* mobile-first: ukryta na małych ekranach */
 .nav ul { list-style:none; margin:0; padding:0; display:flex; gap:var(--space-5); align-items:center; }
-.nav a { text-decoration:none; position:relative; padding:6px 0; }
-.nav a::after {
-  content:""; position:absolute; left:0; bottom:-6px; height:2px; width:0; background:var(--color-accent); transition:width .22s ease;
-}
-.nav a:hover::after, .nav a:focus::after { width:100%; }
-
-/* Nav toggle button (hamburger) */
-.nav-toggle {
-  background:none; border:0; padding:6px; cursor:pointer; display:inline-flex; align-items:center; justify-content:center; line-height:0;
-}
-.nav-toggle svg { width:28px; height:28px; fill:var(--color-primary); }
-
-/* Desktop: show nav */
-@media (min-width: 900px) {
-  .nav { display:block; }
-  .nav-toggle { display:none; }
-}
-
-/* Small-screen menu open state handled by JS (both classes supported) */
-.nav.is-open, .nav.open { display:block; position:absolute; top:60px; right:0; left:0; background:#fff; border-top:1px solid #eee; padding:16px; z-index:60; }
-.nav.is-open ul { display:grid; gap:12px; }
-
-/* ========== HERO ========== */
-.hero { display:grid; grid-template-columns:1fr; gap:var(--space-6); padding:var(--space-7) 0; align-items:center; }
-.hero h1 { font-size:var(--fs-h1); line-height:1.15; margin:0; }
-.lead { font-size:18px; color:#333; margin:0; }
-.hero-cta { display:flex; gap:var(--space-4); flex-wrap:wrap; }
-
-/* Keep two-column hero at the same breakpoint you had — no change to sizing */
-@media (min-width: 1024px) {
-  .hero { grid-template-columns:1.1fr 0.9fr; }
-}
-
-/* Ensure hero image respects container and does not overflow */
-.hero .card { border-radius:var(--radius-lg); overflow:hidden; background:var(--color-gray); }
-.hero .card img { display:block; width:100%; height:auto; object-fit:cover; }
-
-/* ========== SECTIONS & GRID ========== */
-.section { padding:var(--space-7) 0; }
-.section h2 { font-size:var(--fs-h2); margin:0 0 var(--space-5); }
-.grid { display:grid; gap:var(--space-5); }
-.grid.cols-3 { grid-template-columns:repeat(3,1fr); }
-@media (max-width:1024px){ .grid.cols-3{ grid-template-columns:repeat(2,1fr); } }
-@media (max-width:768px){ .grid.cols-3{ grid-template-columns:1fr; } }
-
-/* ========== ARTICLE CARDS (visual polish only) ========== */
-.card {
-  background:#fff;
-  border:1px solid #e7e8ea;
-  border-radius:var(--radius);
-  overflow:hidden;
-  display:flex;
-  flex-direction:column;
-  transition: transform .28s cubic-bezier(.2,.9,.2,1), box-shadow .28s ease, border-color .2s ease;
-  will-change: transform;
-}
-
-/* subtle lift on hover — minimal effect so layout doesn't shift */
-.card:hover { transform: translateY(-6px); box-shadow: var(--shadow-1); border-color: rgba(11,61,145,0.06); }
-.card:active { transform: translateY(-2px); }
-
-/* image inside card — keep natural sizing, no forced heights */
-.card picture, .card img { display:block; width:100%; height:auto; }
-
-/* meta and content spacing unchanged */
-.card .meta { display:flex; gap:var(--space-3); font-size:13px; color:#555; flex-wrap:wrap; }
-.card .content { padding:var(--space-5); }
-
-/* tags */
-.tags { display:flex; gap:8px; flex-wrap:wrap; }
-.tag { font-size:12px; background:#eef5ff; border:1px solid #d7e9ff; bord
+.nav a { text-decoration:none; position:relative; padding:6px 0;
