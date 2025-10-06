@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wizualizacje 3D domów prefabrykowanych</title>
+  <meta name="description" content="Jak tworzyć rzetelne i atrakcyjne wizualizacje 3D domów prefabrykowanych: wyzwania, możliwości, brief, współpraca i legalne wykorzystanie renderów.">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="Domy3D — strona główna">
+        <img src="/assets/img/logo.png" alt="Domy3D — logo serwisu" width="132" height="28" decoding="async" />
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Otwórz lub zamknij menu">
+        <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3"/></svg>
+      </button>
+
+      <nav id="primary-nav" class="nav" aria-label="Główne menu">
+        <ul>
+          <li><a href="/druk-3d/">Druk 3D</a></li>
+          <li><a href="/projektowanie/">Projektowanie</a></li>
+          <li><a href="/wizualizacje/">Wizualizacje</a></li>
+          <li><a href="/articles/">Artykuły</a></li>
+          <li><a href="/contact/">Kontakt</a></li>
+          <li><a href="https://forum.domy3d.eu" class="btn secondary">Forum</a></li>
+        </ul>
+      </nav>
+
+      <a href="/search/" class="icon-search" aria-label="Wyszukaj w serwisie">
+        <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24"><path d="M10 4a6 6 0 104.472 10.027l4.75 4.75 1.415-1.414-4.75-4.75A6 6 0 0010 4zm0 2a4 4 0 110 8 4 4 0 010-8z"/></svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content" class="container" role="main">
+
+    <!-- HERO -->
+    <section class="section hero" aria-label="Hero artykułu">
+      <div class="hero-text">
+        <h1>Wizualizacje 3D domów prefabrykowanych</h1>
+        <p class="lead">Wyzwania, możliwości i dobre praktyki — jak przygotować brief, współpracę i legalne wykorzystanie renderów.</p>
+      </div>
+      <div class="hero-image">
+        <img src="/assets/img/articles/prefab/prefab-hero.jpg" width="600" height="338" alt="Miniatura artykułu: wizualizacja 3D domu prefabrykowanego">
+      </div>
+    </section>
+
+    <!-- ARTICLE BODY -->
+    <article class="article-body section" aria-labelledby="art-title">
+
+      <h2 id="art-title">Dlaczego wizualizacja 3D jest kluczowa w prefabrykacji?</h2>
+      <p>Prefabrykowane domy powstają z segmentów składanych na placu budowy. To wymaga precyzji już na etapie projektu. Wizualizacja 3D upraszcza komunikację między projektantem, inwestorem i producentem, pozwala wcześniej wykryć nieścisłości i pokazuje docelowy efekt w sposób zrozumiały dla wszystkich stron.</p>
+
+      <figure class="illustration">
+        <img src="/assets/img/articles/prefab/prefab-tablet.svg" alt="Tablet z modelem 3D domu i planem obok" loading="lazy" width="840" height="240">
+        <figcaption>Wizualizacja jako łącznik między projektem a realizacją.</figcaption>
+      </figure>
+
+      <h3>Najczęstsze wyzwania</h3>
+      <p><strong>Modularność i powtarzalność:</strong> aby uniknąć monotonii, warto zróżnicować materiały, detal i otoczenie. <strong>Rzetelność odwzorowania:</strong> model 3D powinien bazować na aktualnych rysunkach oraz realnych warstwach i proporcjach. <strong>Kontekst:</strong> dodanie terenu, zieleni i oświetlenia podnosi wiarygodność przekazu.</p>
+
+      <figure class="illustration">
+        <img src="/assets/img/articles/prefab/prefab-modules.svg" alt="Schemat składania modułów prefabrykatu" loading="lazy" width="840" height="220">
+        <figcaption>Prefabrykacja: łączenie segmentów krok po kroku.</figcaption>
+      </figure>
+
+      <h2>Możliwości współczesnych wizualizacji 3D</h2>
+      <p>Nowoczesne narzędzia pozwalają tworzyć ujęcia statyczne, panoramy 360° i krótkie animacje. Coraz częściej wykorzystuje się też przeglądarkowe modele, które ułatwiają zdalne konsultacje. Dzięki temu wizualizacja pełni funkcję projektową, informacyjną i promocyjną jednocześnie.</p>
+
+      <figure class="illustration">
+        <img src="/assets/img/articles/prefab/prefab-variants.svg" alt="Trzy warianty wizualizacji tego samego domu" loading="lazy" width="840" height="200">
+        <figcaption>Warianty kolorystyczne i materiałowe — ten sam model, różne wrażenie.</figcaption>
+      </figure>
+
+      <h2>Jak przygotować brief i materiały</h2>
+      <p>Dobry brief skraca czas pracy i liczbę poprawek. Warto zebrać aktualne rysunki (DWG/IFC/PDF), opisać materiały i kolory, wskazać liczbę ujęć i termin oraz określić cel (oferta, katalog, prezentacja inwestorska). Im pełniejsze dane, tym bardziej rzetelny efekt.</p>
+
+      <figure class="illustration">
+        <img src="/assets/img/articles/prefab/prefab-cad-vs-render.svg" alt="Porównanie rysunku technicznego i renderu 3D" loading="lazy" width="840" height="220">
+        <figcaption>Model techniczny a finalny render — spójne dane, spójny efekt.</figcaption>
+      </figure>
+
+      <h2>Współpraca projektant — grafik 3D</h2>
+      <p>Najlepsze rezultaty osiąga się, gdy wszyscy pracują na tych samych danych źródłowych. Aktualny model i rysunki ograniczają rozbieżności między dokumentacją a wizualizacją i pozwalają szybciej wprowadzać zmiany.</p>
+
+      <figure class="illustration">
+        <img src="/assets/img/articles/prefab/prefab-brief.svg" alt="Checklist materiałów do wizualizacji" loading="lazy" width="840" height="220">
+        <figcaption>Brief: rysunki, kolory, referencje i założone ujęcia.</figcaption>
+      </figure>
+
+      <h2>Bezpieczne, legalne wykorzystanie wizualizacji</h2>
+      <p>Stosuj wyłącznie autorskie grafiki i tekstury z licencją komercyjną, nie kopiuj cudzych renderów i nie używaj znaków towarowych bez zgody. Jeżeli wizualizacja powstaje na zlecenie, zadbaj o umowę regulującą prawa do wykorzystania (przeniesienie lub licencję) i zakres publikacji.</p>
+
+      <figure class="illustration">
+        <img src="/assets/img/articles/prefab/prefab-license.svg" alt="Symboliczna licencja i zabezpieczenie" loading="lazy" width="840" height="220">
+        <figcaption>Ustal prawa do plików i zakres ich wykorzystania.</figcaption>
+      </figure>
+
+      <p>Podsumowując: wizualizacja 3D to narzędzie, które wspiera projekt, komunikację i sprzedaż. Połączenie rzetelności technicznej z przemyślaną estetyką i bezpiecznym obiegiem praw gwarantuje najlepszy efekt.</p>
+    </article>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <p>&copy; 2025 Domy3D.eu. Wszelkie prawa zastrzeżone.</p>
+      <nav>
+        <ul>
+          <li><a href="/polityka-prywatnosci.html">Polityka prywatności</a></li>
+          <li><a href="/kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.min.js" defer></script>
+</body>
+</html>
