@@ -273,3 +273,60 @@ header.site-header {
     gap: 24px;
   }
 }
+
+/* ========== PRAWY PANEL ========== */
+.right-panel { display: none; }
+
+/* Desktop – pokazuj panel */
+@media (min-width: 1100px) {
+  /* zostaw miejsce po prawej stronie na panel */
+  body.has-right-panel .container {
+    padding-right: 360px; /* szerokość panelu + margines */
+  }
+
+  .right-panel {
+    display: block;
+    position: fixed;
+    top: 88px; /* pod sticky headerem */
+    right: 24px;
+    width: 320px;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    background: #fff;
+    border: 1px solid #e7e8ea;
+    border-radius: 12px;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.06);
+    padding: 16px 20px;
+    z-index: 40; /* pod headerem (ma 50) */
+  }
+
+  .rp-card + .rp-card { margin-top: 16px; }
+
+  .rp-card h4 {
+    margin: 0 0 8px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-primary);
+  }
+
+  .rp-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .rp-list li + li { margin-top: 6px; }
+
+  .rp-list a {
+    color: var(--color-text);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .rp-list a:hover,
+  .rp-list a:focus {
+    color: var(--color-accent);
+    text-decoration: underline;
+  }
+}
+
