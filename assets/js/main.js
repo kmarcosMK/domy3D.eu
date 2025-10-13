@@ -47,54 +47,51 @@
     });
   })();
 
-  // -------- Cookie banner + Analytics (consent-based)
+// -------- Cookie banner + Analytics (consent-based)
 (function(){
   var KEY = 'domy3d_cookie_consent';
   var banner  = $('#cookie-banner');
   if(!banner) return;
 
-  // Uzupełnij tutaj swoim Measurement ID (np. G-ABCDEFG12)
   var GA_MEASUREMENT_ID = 'G-CKS8V6N8DD';
   var analyticsLoaded = false;
 
   function loadAnalytics(){
     if(analyticsLoaded) return;
     analyticsLoaded = true;
-
-    // dodaj skrypt gtag.js
     var s = document.createElement('script');
     s.async = true;
     s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_MEASUREMENT_ID;
     document.head.appendChild(s);
 
-    // initialize gtag
     window.dataLayer = window.dataLayer || [];
     function gtag(){ dataLayer.push(arguments); }
     window.gtag = window.gtag || gtag;
     gtag('js', new Date());
-    // anonimyzacja IP + uruchomienie konfiguracji
     gtag('config', GA_MEASUREMENT_ID, { 'anonymize_ip': true });
   }
 
-  function get(key){
-    try { return localStorage.getItem(key); } catch(_) { return null; }
+  function get(key){ try { return localStorage.getItem(key); } catch(_) { return null; } }
+  function set(key,val){ try { localStorage.setItem(key,val); } catch(_) {} }
+
+  var accept = $('#cookie-accept');
+  var close  = $('#cookie-close');
+  var xbtn   = $('#cookie-x');
+
+  function showBanner(){
+    banner.hidden = false;
+    banner.classList.add('show');
   }
-  function set(key, val){
-    try { localStorage.setItem(key, val); } catch(_) {}
+  function hideBanner(){
+    banner.classList.remove('show');
+    banner.hidden = true;
   }
 
-  var accept  = $('#cookie-accept');
-  var close   = $('#cookie-close');
-  var xbtn    = $('#cookie-x');
-
-  function hideBanner(){ banner.hidden = true; }
-
-  // jeśli wcześniej zaakceptowano — ładuj analytics automatycznie
   if(get(KEY) === 'accepted') {
     hideBanner();
     loadAnalytics();
   } else {
-    banner.hidden = false;
+    showBanner();
   }
 
   function acceptHandler(){
@@ -113,6 +110,7 @@
     if(e.key === 'Escape' && !banner.hidden) closeHandler();
   });
 })();
+
 
 
   // -------- Reading time (opcjonalne)
