@@ -49,7 +49,7 @@
 
 // -------- Cookie banner + Analytics (consent-based)
 (function(){
-  var KEY = 'domy3d_cookie_consent';
+  var KEY = 'domy3d_cookie_consent_v2'; // <- nowy klucz, unieważnia stare zgody
   var banner  = $('#cookie-banner');
   if(!banner) return;
 
@@ -63,7 +63,6 @@
     s.async = true;
     s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_MEASUREMENT_ID;
     document.head.appendChild(s);
-
     window.dataLayer = window.dataLayer || [];
     function gtag(){ dataLayer.push(arguments); }
     window.gtag = window.gtag || gtag;
@@ -79,19 +78,28 @@
   var xbtn   = $('#cookie-x');
 
   function showBanner(){
-    banner.hidden = false;
-    banner.classList.add('show');
+    banner.hidden = false;           // zdejmij atrybut hidden
+    banner.classList.add('show');    // -> display:block z CSS
   }
   function hideBanner(){
-    banner.classList.remove('show');
-    banner.hidden = true;
+    banner.classList.remove('show'); // usuń display:block
+    banner.hidden = true;            // i schowaj atrybutem
   }
 
-  if(get(KEY) === 'accepted') {
-    hideBanner();
-    loadAnalytics();
+  function init(){
+    if(get(KEY) === 'accepted') {
+      hideBanner();
+      loadAnalytics();
+    } else {
+      showBanner();
+    }
+  }
+
+  // Bezpieczne uruchomienie po zparsowaniu DOM (belt & suspenders)
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
   } else {
-    showBanner();
+    init();
   }
 
   function acceptHandler(){
@@ -100,7 +108,7 @@
     loadAnalytics();
   }
   function closeHandler(){
-    hideBanner();
+    hideBanner(); // zamknięcie bez zgody (na tę sesję)
   }
 
   on(accept, 'click', acceptHandler);
@@ -110,6 +118,7 @@
     if(e.key === 'Escape' && !banner.hidden) closeHandler();
   });
 })();
+
 
 
 
